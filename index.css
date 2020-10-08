@@ -8,6 +8,10 @@
     color: white;
 }
 
+h1 h2 {
+    text-align: center;
+}
+
 body {
     background-color: black;
 }
@@ -16,4 +20,5 @@ h5 {
     font-family: "Cutive mono", monospace;
     letter-spacing: 2px;
     word-spacing: 3px;
+    text-align: center;
 }
