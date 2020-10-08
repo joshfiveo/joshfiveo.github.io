@@ -5,6 +5,11 @@
 
 * {
     font-family: "Cutive mono", monospace;
+    color: white;
+}
+
+body {
+    background-color: black;
 }
 
 h5 {
