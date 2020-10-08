@@ -3,6 +3,9 @@
     src: url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
 }
 
+* {
+    font-family: "Cutive mono", monospace;
+}
 
 h5 {
     font-family: "Cutive mono", monospace;
