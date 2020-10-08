@@ -1,0 +1,9 @@
+@font-face {
+    font-family: cutive-regular;
+    src: url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+}
+
+
+h5 {
+    font-family: "Cutive mono", monospace;
+}
