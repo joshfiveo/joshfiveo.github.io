@@ -28,6 +28,7 @@ button {
     cursor: pointer;
     border-color: maroon;
     border-width: 3px;
+    outline: none;
 
 }
 
