@@ -10,15 +10,28 @@
 
 h1, h2 {
     text-align: center;
+    margin-top: 50px;
 }
 
 body {
     background-color: black;
 }
 
-h5 {
+h3 {
     font-family: "Cutive mono", monospace;
     letter-spacing: 2px;
     word-spacing: 3px;
     text-align: center;
+}
+
+#left {
+    float: left;
+    margin-left: 300px;
+    margin-top: 300px;
+}
+
+#right {
+    float: right;
+    margin-right: 300px;
+    margin-top: 300px;
 }
