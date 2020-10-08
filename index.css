@@ -17,11 +17,18 @@ body {
     background-color: black;
 }
 
-h3 {
+button {
     font-family: "Cutive mono", monospace;
     letter-spacing: 2px;
     word-spacing: 3px;
     text-align: center;
+    color: white;
+    background-color: black;
+    font-size: large;
+    cursor: pointer;
+    border-color: maroon;
+    border-width: 3px;
+
 }
 
 #left {
