@@ -1,3 +1,4 @@
+//PASSAGE AND POEM INVOKERS
 let invokeButton = document.getElementsByClassName("invokeButton");
 let passageButton = document.getElementsByClassName("passageButton");
 
@@ -16,3 +17,4 @@ function invokePassage(){
 invokeButton.onclick = invokePoem;
 passageButton.onclick = invokePassage;
 
+//SUBMIT PASSAGE

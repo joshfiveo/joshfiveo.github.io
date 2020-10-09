@@ -1,31 +1,29 @@
 <!DOCTYPE html>
     <html lang="en">
-    <audio src="./monke.mp3" controls>
-        Your browser does not support the audio element.
-    </audio>
         <head>
+            <script src="index.js"></script>
             <link rel="stylesheet" href="index.css">
             <meta charset="UTF-8">
             <title>Larry Snakes' Poem Emporium</title>
         </head>
-    <body>
-            <h1>Welcome to Larry Snakes' Poem Emporium</h1>
-            <h2><em>The</em> place for McEldritch poems.</h2>
-
+        <body>
+            <div class="heads">
+                <h1>Welcome to Larry Snakes' Poem Emporium</h1>
+                <h2><em>The</em> place for McEldritch poems.</h2>
+            </div>
+            <div id="submit">
+                <button class="submitButton" onclick="submitPassage()">SUBMIT PASSAGE TO ARCHIVES</button>
+            </div>
             <div id="left">
                 <button class="passageButton" onclick="invokePassage()">SUMMON FORTH A PASSAGE OF GREAT McVIRTUE</button>
-                <script src="index.js">
-                </script>
             </div>
             <div id="right">
                 <button class="invokeButton" onclick="invokePoem()">INVOKE McPOEM</button>
-                <script src="index.js">
-                </script>
             </div>
             <div id="bottomcenter">
                 <a href="./database.html">
                     <button class="button">McDATABASE</button>
                 </a>
             </div>
-    </body>
+        </body>
     </html>

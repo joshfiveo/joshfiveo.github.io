@@ -6,6 +6,10 @@
 * {
     font-family: "Cutive mono", monospace;
     color: white;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    text-align: center;
+    background-color: black;
 }
 
 h1, h2, h4 {
@@ -18,36 +22,36 @@ body {
 }
 
 button {
-    font-family: "Cutive mono", monospace;
-    letter-spacing: 2px;
-    word-spacing: 3px;
-    text-align: center;
-    color: white;
-    background-color: black;
-    font-size: large;
     cursor: pointer;
     border-color: maroon;
     border-width: 3px;
     outline: none;
+    font-size: medium;
 
+}
+
+#submit {
+    margin: auto;
+    text-align: center;
+    margin-top: 150px;
 }
 
 #left {
     float: left;
     margin-left: 300px;
-    margin-top: 300px;
+    margin-top: 100px;
 }
 
 #right {
     float: right;
     margin-right: 300px;
-    margin-top: 300px;
+    margin-top: 100px;
 }
 
 #bottomcenter {
     position: fixed;
     left: 50%;
-    bottom: 20px;
+    bottom: 100px;
     transform: translate(-50%, -50%);
     margin: 0 auto;
 }
