@@ -18,3 +18,10 @@ invokeButton.onclick = invokePoem;
 passageButton.onclick = invokePassage;
 
 //SUBMIT PASSAGE
+let submitButton = document.getElementsByClassName("submitButton");
+
+function submitPassage(){
+    alert("Function under McDevelopment...")
+}
+
+submitButton.onclick = submitPassage;
