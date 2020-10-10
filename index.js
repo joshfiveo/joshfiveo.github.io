@@ -17,6 +17,8 @@ function invokePassage(){
 invokeButton.onclick = invokePoem;
 passageButton.onclick = invokePassage;
 
+
+
 //SUBMIT PASSAGE
 let submitButton = document.getElementsByClassName("submitButton");
 
