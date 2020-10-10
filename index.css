@@ -88,4 +88,14 @@ img {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     display: none;
+    border-color: white;
+    border-width: 3px;
+    border-style: solid;
+}
+
+#passageboxtext {
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+    margin-right: 15px;
 }
