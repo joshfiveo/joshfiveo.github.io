@@ -1,57 +1,46 @@
-@font-face {
-    font-family: cutive-regular;
-    src: url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+body, html{
+    margin:0;
+    padding:0;
 }
 
 * {
-    font-family: "Cutive mono", monospace;
+    font-family: Cutive-mono, monospace; !important;
+    background-color: black;
     color: white;
-    letter-spacing: 2px;
-    word-spacing: 3px;
+}
+
+.heads {
+    width: 100%;
     text-align: center;
-    background-color: black;
+    margin-top: 2.5%;
 }
 
-h1, h2, h4 {
-    text-align: center;
-    margin-top: 50px;
+.heads h2 {
+    margin-top: 4%;
 }
 
-body {
-    background-color: black;
+.container {
+    width: 100%;
 }
 
-button {
-    cursor: pointer;
-    border-color: maroon;
-    border-width: 3px;
-    outline: none;
-    font-size: medium;
-
-}
-
-#submit {
-    margin: auto;
-    text-align: center;
-    margin-top: 150px;
-}
-
-#left {
+.buttonsleft {
     float: left;
-    margin-left: 300px;
-    margin-top: 100px;
+    width: 50%;
 }
 
-#right {
+.buttonsright {
     float: right;
-    margin-right: 300px;
-    margin-top: 100px;
+    width: 50%;
 }
 
-#bottomcenter {
-    position: fixed;
-    left: 50%;
-    bottom: 100px;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
+#passage, #submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+}
+
+#invokePoem, #database {
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
 }

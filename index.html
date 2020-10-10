@@ -11,19 +11,26 @@
                 <h1>Welcome to Larry Snakes' Poem Emporium</h1>
                 <h2><em>The</em> place for McEldritch poems.</h2>
             </div>
-            <div id="submit">
-                <button class="submitButton" onclick="submitPassage()">SUBMIT PASSAGE TO ARCHIVES</button>
-            </div>
-            <div id="left">
-                <button class="passageButton" onclick="invokePassage()">SUMMON FORTH A PASSAGE OF GREAT McVIRTUE</button>
-            </div>
-            <div id="right">
-                <button class="invokeButton" onclick="invokePoem()">INVOKE McPOEM</button>
-            </div>
-            <div id="bottomcenter">
-                <a href="./database.html">
-                    <button class="button">McDATABASE</button>
-                </a>
+            <div class="container">
+                <div class="buttonsleft">
+                    <div id="passage">
+                        <button class="passageButton" onclick="invokePassage()">SUMMON FORTH A PASSAGE OF GREAT McVIRTUE</button>
+                    </div>
+                    <div id="submit">
+                        <button class="submitButton" onclick="submitPassage()">SUBMIT PASSAGE TO ARCHIVES</button>
+                    </div>
+
+                </div>
+                <div class="buttonsright">
+                    <div id="invokePoem">
+                        <button class="invokeButton" onclick="invokePoem()">INVOKE McPOEM</button>
+                    </div>
+                    <div id="database">
+                        <a href="./database.html">
+                            <button class="button">McDATABASE</button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </body>
     </html>
