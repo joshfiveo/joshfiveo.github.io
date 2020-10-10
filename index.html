@@ -1,8 +1,8 @@
 <!DOCTYPE html>
     <html lang="en">
         <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
             <script src="index.js"></script>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
             <link rel="stylesheet" href="index.css">
             <meta charset="UTF-8">
             <title>Larry Snakes' Poem Emporium</title>
@@ -16,9 +16,11 @@
                 <div class="buttonsleft">
                     <div id="passage">
                         <button class="passageButton" onclick="invokePassage()">SUMMON FORTH A PASSAGE OF GREAT McVIRTUE</button>
+                        <script src="index.js"></script>
                     </div>
                     <div id="submit">
                         <button class="submitButton" onclick="submitPassage()">SUBMIT PASSAGE TO ARCHIVES</button>
+                        <script src="index.js"></script>
                     </div>
 
                 </div>
@@ -34,11 +36,19 @@
                     </div>
                 </div>
             </div>
+            <div id="passageBox">
+                <h2 id="passageboxtext"></h2>
+            </div>
             <div id="monkepic">
                 <img id="shownPoem">
             </div>
             <div class="hider">
                 <button class="hidePoem" onclick="hidePoem()">Hide poem</button>
+                <script src="index.js"></script>
+            </div>
+            <div class="passagehider">
+                <button class="hidePassageButton" onclick="hidePassage()">Hide passage</button>
+                <script src="index.js"></script>
             </div>
         </body>
     </html>

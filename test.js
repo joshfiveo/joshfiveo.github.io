@@ -1,4 +1,2 @@
-function getRandomIntInclusive() {
-    return Math.floor(Math.random() * 4) + 1;
-}
-console.log(getRandomIntInclusive())
+let passagesArray = ["he is a fur venerate / an utter degenerate","they gargled the jizzom / but read no john grisham","limp dick doug dimmadomes get sliced like cabbage"];
+console.log(passagesArray);

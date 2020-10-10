@@ -1,3 +1,5 @@
+let passagesArray = ["he is a fur venerate / an utter degenerate","they gargled the jizzom / but read no john grisham","limp dick doug dimmadomes get sliced like cabbage"];
+
 //PASSAGE AND POEM INVOKERS
 let passageButton = document.getElementsByClassName("passageButton");
 
@@ -5,8 +7,14 @@ function getRandomIntInclusive() {
     return Math.floor(Math.random() * 4) + 1;
 }
 
+function getRandomIntInclusivePassages() {
+    return Math.floor(Math.random() * 3);
+}
+
 function invokePassage(){
-    alert("Passage " + getRandomIntInclusive() + " was summoned forth.")
+    let i = getRandomIntInclusivePassages();
+    document.getElementById("passageboxtext").innerHTML = passagesArray[i];
+    document.getElementById("passageBox").style.display = "block";
 }
 
 passageButton.onclick = invokePassage;
@@ -42,4 +50,14 @@ let hidePoem = function(){
     document.getElementById("monkepic").style.display = "none";
 }
 
-hider.addEventListener("click", hidePoem());
+hider.onclick = hidePoem;
+
+//HIDE PASSAGE
+
+let passageHider = document.getElementsByClassName("hidePassageButton");
+
+let hidePassage = function(){
+    document.getElementById("passageBox").style.display = "none";
+}
+
+passageHider.onclick = hidePassage;
