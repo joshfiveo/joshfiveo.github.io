@@ -67,7 +67,7 @@ img {
 
 .hider {
     position: fixed;
-    left: 40%;
+    left: 35%;
     bottom: 10px;
     transform: translate(-50%, -50%);
     margin: 0 auto;
@@ -75,7 +75,7 @@ img {
 
 .passagehider {
     position: fixed;
-    left: 60%;
+    left: 65%;
     bottom: 10px;
     transform: translate(-50%, -50%);
     margin: 0 auto;

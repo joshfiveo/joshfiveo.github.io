@@ -61,3 +61,9 @@ let hidePassage = function(){
 }
 
 passageHider.onclick = hidePassage;
+
+//MORE PASSAGES
+
+let morePassages = document.getElementById("passageBox");
+
+morePassages.onclick = invokePassage;

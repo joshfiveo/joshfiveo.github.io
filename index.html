@@ -16,18 +16,15 @@
                 <div class="buttonsleft">
                     <div id="passage">
                         <button class="passageButton" onclick="invokePassage()">SUMMON FORTH A PASSAGE OF GREAT McVIRTUE</button>
-                        <script src="index.js"></script>
                     </div>
                     <div id="submit">
                         <button class="submitButton" onclick="submitPassage()">SUBMIT PASSAGE TO ARCHIVES</button>
-                        <script src="index.js"></script>
                     </div>
 
                 </div>
                 <div class="buttonsright">
                     <div id="invokePoem">
                         <button class="invokeButton" onclick="showPoem()">INVOKE McPOEM</button>
-                        <script src="index.js"></script>
                     </div>
                     <div id="database">
                         <a href="./database.html">
@@ -36,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div id="passageBox">
+            <div id="passageBox" onclick="invokePassage">
                 <h2 id="passageboxtext"></h2>
             </div>
             <div id="monkepic">
@@ -44,11 +41,9 @@
             </div>
             <div class="hider">
                 <button class="hidePoem" onclick="hidePoem()">Hide poem</button>
-                <script src="index.js"></script>
             </div>
             <div class="passagehider">
                 <button class="hidePassageButton" onclick="hidePassage()">Hide passage</button>
-                <script src="index.js"></script>
             </div>
         </body>
     </html>
