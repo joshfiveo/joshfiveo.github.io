@@ -3,7 +3,6 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <link rel="stylesheet" href="database.css">
-        <script src="database.js"></script>
         <meta charset="UTF-8">
         <title>Larry Snakes' Archives</title>
     </head>
@@ -12,14 +11,23 @@
             <ul>
                 <li>
                     <button class="poem1" onclick="showPoem()">Poem 1</button>
+                    <script src="database.js"></script>
                 </li>
-                <li>Poem 2</li>
-                <li>Poem 3</li>
-                <li>Poem 4</li>
+                <li>
+                    <button class="poem1" onclick="showPoem()">Poem 1</button>
+                    <script src="database.js"></script>
+                </li>
+                <li>
+                    <button class="poem1" onclick="showPoem()">Poem 1</button>
+                    <script src="database.js"></script>
+                </li>
             </ul>
         </div>
-        <div class="monkepic">
-            <img src="./mcdatabase/poem1.jpg" alt="bruh">
+        <div id="monkepic">
+            <img id="shownPoem">
+        </div>
+        <div class="hider">
+            <button class="hidePoem" onclick="hidePoem()">Hide poem</button>
         </div>
     </body>
 </html>
