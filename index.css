@@ -50,3 +50,25 @@ button {
     outline: none;
     border-width: 3px;
 }
+
+#monkepic {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+img {
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+.hider {
+    position: fixed;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
