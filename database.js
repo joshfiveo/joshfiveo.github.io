@@ -1,13 +1,15 @@
 //SHOW POEM
 
-let poem1 = document.getElementsByClassName("poem1");
+let poemButtons = document.getElementsByClassName("poemButton");
+let poemNumber;
 
-let showPoem = function(){
-    document.getElementById("shownPoem").src = "./mcdatabase/poem1.jpg"
+let databasePoem = function(numberOfPoem){
+    poemNumber = numberOfPoem;
+    document.getElementById("shownPoem").src = `./mcdatabase/${poemNumber}.jpg`;
     document.getElementById("monkepic").style.display = "block";
 }
 
-poem1.onclick = showPoem;
+poemButtons.onclick = databasePoem;
 
 //HIDE POEM
 
