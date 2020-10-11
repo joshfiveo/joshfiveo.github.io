@@ -4,7 +4,7 @@ let passagesArray = ["he is a fur venerate / an utter degenerate","they gargled 
 let passageButton = document.getElementsByClassName("passageButton");
 
 function getRandomIntInclusive() {
-    return Math.floor(Math.random() * 4) + 1;
+    return Math.floor(Math.random() * 102) + 1;
 }
 
 function getRandomIntInclusivePassages() {
@@ -36,7 +36,7 @@ let invokeButton = document.getElementsByClassName("invokeButton");
 
 let showPoem = function(){
     let randomNumber = getRandomIntInclusive()
-    document.getElementById("shownPoem").src = `./mcdatabase/poem${randomNumber}.jpg`
+    document.getElementById("shownPoem").src = `./mcdatabase/poem (${randomNumber}).jpg`
     document.getElementById("monkepic").style.display = "block";
 }
 
