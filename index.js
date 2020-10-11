@@ -48,19 +48,11 @@ let hider = document.getElementsByClassName("hidePoem");
 
 let hidePoem = function(){
     document.getElementById("monkepic").style.display = "none";
+    document.getElementById("passageBox").style.display ="none";
 }
 
 hider.onclick = hidePoem;
 
-//HIDE PASSAGE
-
-let passageHider = document.getElementsByClassName("hidePassageButton");
-
-let hidePassage = function(){
-    document.getElementById("passageBox").style.display = "none";
-}
-
-passageHider.onclick = hidePassage;
 
 //MORE PASSAGES
 
