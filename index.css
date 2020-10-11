@@ -5,8 +5,8 @@ body, html{
 
 * {
     font-family: Cutive-mono, monospace; !important;
-    background-color: black;
-    color: white;
+    background-color: hsl(0, 0%, 10%);
+    color: hsl(0, 0%, 90%);
 }
 
 .heads {
@@ -49,6 +49,14 @@ button {
     font-size: large;
     outline: none;
     border-width: 3px;
+    border-radius: 8px;
+    transition-duration: 0.25s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 50%);
+    color: hsl(0, 0%, 10%);
 }
 
 #monkepic {
@@ -98,4 +106,8 @@ img {
     justify-content: center;
     margin-left: 15px;
     margin-right: 15px;
+}
+
+div {
+    border-radius: 8px;
 }
