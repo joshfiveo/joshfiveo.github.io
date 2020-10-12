@@ -4,7 +4,7 @@ let passagesArray = ["he is a fur venerate / an utter degenerate","they gargled 
 let passageButton = document.getElementsByClassName("passageButton");
 
 function getRandomIntInclusive() {
-    return Math.floor(Math.random() * 102) + 1;
+    return Math.floor(Math.random() * 42) + 1;
 }
 
 function getRandomIntInclusivePassages() {
