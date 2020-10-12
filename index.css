@@ -98,6 +98,9 @@ img {
     justify-content: center;
     margin-left: 20px;
     margin-right: 20px;
+    font-family: Cutive-mono, monospace;
+    text-transform: uppercase;
+    font-weight: lighter;
 }
 
 div {

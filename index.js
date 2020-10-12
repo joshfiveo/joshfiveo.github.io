@@ -19,14 +19,15 @@ function invokePassage(){
 
 passageButton.onclick = invokePassage;
 
-//SUBMIT PASSAGE
-let submitButton = document.getElementsByClassName("submitButton");
+//MUSIC
 
-function submitPassage(){
-    alert("Function under McDevelopment...")
+let musicButton = document.getElementsByClassName("musicButton");
+
+let playMusic = function(url) {
+    new Audio(url).play();
 }
 
-submitButton.onclick = submitPassage;
+musicButton.onclick = playMusic;
 
 //HIDER AND SHOWER
 
