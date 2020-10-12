@@ -29,8 +29,6 @@ let playMusic = function(url) {
 
 musicButton.onclick = playMusic;
 
-//HIDER AND SHOWER
-
 //SHOW POEM
 
 let invokeButton = document.getElementsByClassName("invokeButton");
