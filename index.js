@@ -24,7 +24,7 @@ passageButton.onclick = invokePassage;
 let musicButton = document.getElementsByClassName("musicButton");
 
 let playMusic = function(url) {
-    new Audio(url).play();
+    new Audio(`./${url}`).play();
 }
 
 musicButton.onclick = playMusic;
