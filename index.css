@@ -83,14 +83,16 @@ img {
 
 #passageBox {
     position: absolute;
-    left: 50%;
     top: 50%;
+    left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     display: none;
     border-color: white;
     border-width: 3px;
     border-style: solid;
+    max-height: 85vh;
+    max-width: 85vw;
 }
 
 #passageboxtext {
