@@ -15,6 +15,9 @@ function invokePassage(){
     let i = getRandomIntInclusivePassages();
     document.getElementById("passageboxtext").innerHTML = passagesArray[i];
     document.getElementById("passageBox").style.display = "block";
+    if (document.getElementById("monkepic").style.display === "block"){
+        document.getElementById("monkepic").style.display = "none";
+    }
 }
 
 passageButton.onclick = invokePassage;
@@ -37,6 +40,9 @@ let showPoem = function(){
     let randomNumber = getRandomIntInclusive()
     document.getElementById("shownPoem").src = `./mcdatabase/poem (${randomNumber}).jpg`
     document.getElementById("monkepic").style.display = "block";
+    if (document.getElementById("passageBox").style.display === "block"){
+        document.getElementById("passageBox").style.display = "none";
+    }
 }
 
 invokeButton.onclick = showPoem;
