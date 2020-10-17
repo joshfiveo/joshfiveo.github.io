@@ -13,24 +13,18 @@
                 <h2><em>The</em> place for McEldritch poems.</h2>
             </div>
             <div class="container">
-                <div class="buttonsleft">
-                    <div id="passage">
-                        <button class="passageButton" onclick="invokePassage()">SUMMON FORTH A PASSAGE OF GREAT McVIRTUE</button>
-                    </div>
-                    <div id="database">
-                        <a href="./database.html">
-                            <button class="button">McDATABASE</button>
-                        </a>
-                    </div>
+                <div id="passage">
+                    <button class="passageButton" onclick="invokePassage()">SUMMON FORTH A PASSAGE <br> OF GREAT McVIRTUE</button>
                 </div>
-                <div class="buttonsright">
-                    <div id="invokePoem">
-                        <button class="invokeButton" onclick="showPoem()">INVOKE POEM</button>
-                    </div>
-                    <div id="music">
-                        <button class="musicButton" onclick="playMusic('./BRRBRRBRR.mp3')">BRR BRR BRR</button>
-                        <audio class="music" src='./BRRBRRBRR.mp3'></audio>
-                    </div>
+                <div id="database">
+                    <button onclick="location.href='./database.html'" type="button" class="button">McDATABASE</button>
+                </div>
+                <div id="invokePoem">
+                    <button class="invokeButton" onclick="showPoem()">INVOKE POEM</button>
+                </div>
+                <div id="music">
+                    <button class="musicButton" onclick="playMusic('./BRRBRRBRR.mp3')">BRR BRR BRR</button>
+                    <audio class="music" src='./BRRBRRBRR.mp3'></audio>
                 </div>
             </div>
             <div id="passageBox" onclick="invokePassage()">
