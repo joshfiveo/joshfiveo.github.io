@@ -28,7 +28,6 @@ body {
 
 #passage, #music, #invokePoem, #database {
     display: inline-block;
-    margin: 5px 5px 5px 5px;
 }
 
 button {
