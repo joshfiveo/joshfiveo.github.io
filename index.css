@@ -104,3 +104,11 @@ img {
 div {
     border-radius: 8px;
 }
+
+.footer {
+    text-align: center;
+    width: 100vw;
+    font-size: 14px;
+    display: inline-block;
+    alignment: center;
+}
