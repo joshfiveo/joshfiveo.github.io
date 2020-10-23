@@ -16,17 +16,18 @@ function invokePassage(){
     document.getElementById("passageboxtext").innerHTML = passagesArray[i];
     document.getElementById("passageBox").style.display = "block";
     if (document.getElementById("monkepic").style.display === "block"){
-        document.getElementById("monkepic").style.display = "none";
+            document.getElementById("monkepic").style.display = "none";
     }
 }
 
 passageButton.onclick = invokePassage;
 
 //MUSIC
+
 let musicButtonJS = document.getElementById('musicButton')
 
-let playMusic = function(url) {
-    new Audio(`./${url}`).play();
+let playMusic = function() {
+    document.getElementById('musicTag').play();
 
     let ciaArray = ["Who can kill a general in his bed?", "Overthrow dictators if they're Red?", "Who can buy a government so cheap?", "Change a cabinet without a squeak?", "Who can train guerrillas by the dozens?", "Who can get a budget that's so great?", "Who has got the secret-est service?", "Who can take the sugar from a sack / Pour in LSD and put it back?"]
     let i = Math.floor(Math.random() * ciaArray.length);
