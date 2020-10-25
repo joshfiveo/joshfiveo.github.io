@@ -36,6 +36,18 @@ let nextPoem = function(){
 
 next.onclick = nextPoem;
 
+//PILETAST FUNKTIONER
+
+document.addEventListener("keydown", function(event){
+    const key = event.key;
+    if (key === "ArrowRight"){
+        nextPoem();
+    }
+    if (key === "ArrowLeft"){
+        prevPoem();
+    }
+})
+
 // PREV POEM
 
 let prev = document.getElementsByClassName('prevPoem');
