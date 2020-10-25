@@ -76,4 +76,32 @@ document.addEventListener("keydown", function (event) {
     if (key === "Escape") {
         hidePoem();
     }
+    if (key === "Enter") {
+        showPoem();
+    }
+    if (key === " ") {
+        invokePassage();
+    }
+    if (key === "c") {
+        playMusic();
+        ciaMan();
+    }
+    if (key === "i") {
+        playMusic();
+        ciaMan();
+    }
+    if (key === "a") {
+        playMusic();
+        ciaMan();
+    }
 });
+
+// CIA MAN
+
+let ciaMan = function () {
+    setTimeout(function () {
+        hidePoem();
+    }, 50);
+    document.getElementById('shownPoem').src = "./ciaman.jpg";
+    document.getElementById('monkepic').style.display = "block";
+}

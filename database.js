@@ -49,7 +49,7 @@ document.addEventListener("keydown", function (event) {
     if (key === "Escape") {
         hidePoem();
     }
-})
+});
 
 // PREV POEM
 
