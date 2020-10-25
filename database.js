@@ -7,23 +7,29 @@ let databasePoem = function (numberOfPoem) {
     poemNumber = numberOfPoem;
     document.getElementById("shownPoem").src = `./mcdatabase/${poemNumber}.jpg`;
     document.getElementById("monkepic").style.display = "flex";
+    document.getElementById('hider').style.display = "block";
+    document.getElementById('next').style.display = "block";
+    document.getElementById('prev').style.display = "block";
 }
 
 poemButtons.onclick = databasePoem;
 
 //HIDE POEM
 
-let hider = document.getElementsByClassName("hidePoem");
+let hider = document.getElementById('hidePoem')
 
 let hidePoem = function () {
     document.getElementById("monkepic").style.display = "none";
+    document.getElementById('hider').style.display = "none";
+    document.getElementById('next').style.display = "none";
+    document.getElementById('prev').style.display = "none";
 }
 
 hider.onclick = hidePoem;
 
 // NEXT POEM
 
-let next = document.getElementsByClassName('nextPoem');
+let next = document.getElementById('nextPoem')
 
 let nextPoem = function () {
     let srcString = document.getElementById('shownPoem').src;
@@ -53,7 +59,7 @@ document.addEventListener("keydown", function (event) {
 
 // PREV POEM
 
-let prev = document.getElementsByClassName('prevPoem');
+let prev = document.getElementById('prevPoem')
 
 let prevPoem = function () {
     let srcString = document.getElementById('shownPoem').src;

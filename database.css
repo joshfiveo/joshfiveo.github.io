@@ -43,24 +43,24 @@ img {
     margin: auto;
 }
 
-.hider {
-    display: block;
+#hider {
+    display: none;
     position: fixed;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.prev {
-    display: block;
+#prev {
+    display: none;
     position: fixed;
     bottom: 10px;
     left: 25%;
     transform: translateX(-50%);
 }
 
-.next {
-    display: block;
+#next {
+    display: none;
     position: fixed;
     bottom: 10px;
     left: 75%;
@@ -91,7 +91,7 @@ ul {
     grid-template-rows: repeat(13, 1fr);
 }
 
-@media only screen and (max-width: 15cm){
+@media only screen and (max-width: 15cm) {
     ul {
         display: grid;
         grid-template-rows: repeat(40, 1fr);
