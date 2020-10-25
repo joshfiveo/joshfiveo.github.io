@@ -3,9 +3,15 @@ body, html {
     padding: 0;
 }
 
+.poemButton {
+    height: 3em;
+    width: 6em;
+}
+
 li {
     list-style-type: none;
     display: inline-block;
+    margin-top: 10px;
 }
 
 .container {
@@ -64,14 +70,14 @@ img {
 button {
     font-size: large;
     outline: none;
-    border-width: 3px;
-    border-radius: 8px;
+    border: 2px solid;
+    border-radius: 5px;
     transition-duration: 0.1s;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: hsl(0, 0%, 50%);
+    background-color: hsl(0, 0%, 90%);
     color: hsl(0, 0%, 10%);
 }
 
@@ -79,6 +85,16 @@ div {
     border-radius: 8px;
 }
 
-li {
-    margin-top: 10px;
+ul {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+}
+
+@media only screen and (max-width: 15cm){
+    ul {
+        display: grid;
+        grid-template-rows: repeat(40, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
