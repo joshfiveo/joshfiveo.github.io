@@ -32,6 +32,7 @@ let nextPoem = function(){
 
     alert(srcNumberPlusOne);
     document.getElementById('shownPoem').src = `./mcdatabase/poem(${srcNumberPlusOne})`
+    document.getElementById('shownPoem').style.display = "block";
 }
 
 next.onclick = nextPoem;
@@ -46,7 +47,8 @@ let prevPoem = function(){
     let srcNumberMinusOne = parseInt(srcNumber) - 1;
 
     alert(srcNumberMinusOne);
-    document.getElementById('shownPoem').src = `./mcdatabase/poem(${srcNumberMinusOne})`
+    document.getElementById('shownPoem').src = `./mcdatabase/poem(${srcNumberMinusOne})`;
+    document.getElementById('shownPoem').style.display = "block";
 }
 
 prev.onclick = prevPoem;
