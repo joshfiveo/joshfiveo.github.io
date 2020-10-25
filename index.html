@@ -1,43 +1,44 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, minimum-scale=1.0">
-            <link rel="stylesheet" href="index.css">
-            <meta charset="UTF-8">
-            <title>Larry Snakes' Poem Emporium</title>
-        </head>
-        <body>
-            <audio src="./ciaman.mp3" id="musicTag"></audio>
-            <div class="heads">
-                <h1>Welcome to Larry Snakes' Poem Emporium</h1>
-                <h2><em>The</em> place for McEldritch poems.</h2>
-            </div>
-            <div class="container">
-                <div id="passage">
-                    <button class="passageButton" onclick="invokePassage()">SUMMON FORTH A PASSAGE <br> OF GREAT McVIRTUE</button>
-                </div>
-                <div id="database">
-                    <button onclick="location.href='./database.html'" type="button" class="button">McDATABASE</button>
-                </div>
-                <div id="invokePoem">
-                    <button class="invokeButton" onclick="showPoem()">INVOKE POEM</button>
-                </div>
-                <div id="music">
-                    <button id="musicButton">Who?</button>
-                </div>
-            </div>
-            <div class="footer">
-                <p>The poems were found on the streets of Aarhus in the summer of 2020. The creator of this website has no affilliation with, or knowledge of, the creator(s) of these poems.</p>
-            </div>
-            <div id="passageBox" onclick="invokePassage()">
-                <h2 id="passageboxtext"></h2>
-            </div>
-            <div id="monkepic">
-                <img id="shownPoem" src="" alt="">
-            </div>
-            <div class="hider">
-                <button class="hidePoem" onclick="hidePoem()">Hide</button>
-            </div>
-            <script src="index.js"></script>
-        </body>
-    </html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <title>Larry Snakes' Poem Emporium</title>
+</head>
+<body>
+<audio src="./ciaman.mp3" id="musicTag"></audio>
+<div class="heads">
+    <h1>Welcome to Larry Snakes' Poem Emporium</h1>
+    <h2><em>The</em> place for McEldritch poems.</h2>
+</div>
+<div class="container">
+    <div id="passage">
+        <button class="passageButton" onclick="invokePassage()">SUMMON FORTH A PASSAGE <br> OF GREAT McVIRTUE</button>
+    </div>
+    <div id="database">
+        <button onclick="location.href='./database.html'" type="button" class="button">McDATABASE</button>
+    </div>
+    <div id="invokePoem">
+        <button class="invokeButton" onclick="showPoem()">INVOKE POEM</button>
+    </div>
+    <div id="music">
+        <button id="musicButton">Who?</button>
+    </div>
+</div>
+<div class="footer">
+    <p>The poems were found on the streets of Aarhus in the summer of 2020. The creator of this website has no
+        affilliation with, or knowledge of, the creator(s) of these poems.</p>
+</div>
+<div id="passageBox" onclick="invokePassage()">
+    <h2 id="passageboxtext"></h2>
+</div>
+<div id="monkepic">
+    <img id="shownPoem" src="" alt="">
+</div>
+<div class="hider">
+    <button class="hidePoem" onclick="hidePoem()">Hide</button>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
