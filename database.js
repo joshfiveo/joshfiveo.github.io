@@ -20,3 +20,17 @@ let hidePoem = function(){
 }
 
 hider.onclick = hidePoem;
+
+// NEXT POEM
+
+let next = document.getElementsByClassName('nextPoem');
+
+let nextPoem = function(){
+    let srcString = document.getElementById('shownPoem').src;
+    let srcNumber = srcString.replace(/[^0-9]/g, '')
+    let srcNumberPlusOne = parseInt(srcNumber) + 1;
+
+    document.getElementById('shownPoem').src = `./mcdatabase/poem(${srcNumberPlusOne})`
+}
+
+next.onclick = nextPoem;
