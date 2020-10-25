@@ -30,7 +30,23 @@ let nextPoem = function(){
     let srcNumber = srcString.replace(/[^0-9]/g, '')
     let srcNumberPlusOne = parseInt(srcNumber) + 1;
 
+    alert(srcNumberPlusOne);
     document.getElementById('shownPoem').src = `./mcdatabase/poem(${srcNumberPlusOne})`
 }
 
 next.onclick = nextPoem;
+
+// PREV POEM
+
+let prev = document.getElementsByClassName('prevPoem');
+
+let prevPoem = function(){
+    let srcString = document.getElementById('shownPoem').src;
+    let srcNumber = srcString.replace(/[^0-9]/g, '')
+    let srcNumberMinusOne = parseInt(srcNumber) - 1;
+
+    alert(srcNumberMinusOne);
+    document.getElementById('shownPoem').src = `./mcdatabase/poem(${srcNumberMinusOne})`
+}
+
+prev.onclick = prevPoem;
