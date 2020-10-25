@@ -6,7 +6,7 @@ let poemNumber;
 let databasePoem = function(numberOfPoem){
     poemNumber = numberOfPoem;
     document.getElementById("shownPoem").src = `./mcdatabase/${poemNumber}.jpg`;
-    document.getElementById("monkepic").style.display = "block";
+    document.getElementById("monkepic").style.display = "flex";
 }
 
 poemButtons.onclick = databasePoem;
@@ -31,7 +31,7 @@ let nextPoem = function(){
     let srcNumberPlusOne = parseInt(srcNumber) + 1;
 
     document.getElementById('shownPoem').src = `./mcdatabase/poem(${srcNumberPlusOne}).jpg`
-    document.getElementById('shownPoem').style.display = "block";
+    document.getElementById('shownPoem').style.display = "flex";
 }
 
 next.onclick = nextPoem;
@@ -46,7 +46,7 @@ let prevPoem = function(){
     let srcNumberMinusOne = parseInt(srcNumber) - 1;
 
     document.getElementById('shownPoem').src = `./mcdatabase/poem(${srcNumberMinusOne}).jpg`;
-    document.getElementById('shownPoem').style.display = "block";
+    document.getElementById('shownPoem').style.display = "flex";
 }
 
 prev.onclick = prevPoem;
