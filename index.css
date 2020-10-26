@@ -24,7 +24,7 @@ body {
 .container {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
 
@@ -41,7 +41,7 @@ button {
     cursor: pointer;
 }
 
-.button, .passageButton, .invokeButton, #musicButton {
+.button, .passageButton, .invokeButton, #musicButton, #tbd1, #realMusicButton {
     position: relative;
     left: 50%;
     top: 50%;
@@ -61,6 +61,12 @@ button {
         transform: translate(-50%, -50%);
         height: 90%;
         width: 90%;
+    }
+    .container {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
     }
 }
 
