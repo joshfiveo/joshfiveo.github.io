@@ -51,6 +51,16 @@ button {
     height: 50%;
 }
 
+@media only screen and (max-width: 15cm) {
+    .button, .passageButton, .invokeButton, #musicButton {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
 button:hover {
     background-color: hsl(0, 0%, 90%);
     color: hsl(0, 0%, 10%);
@@ -114,4 +124,8 @@ div {
     font-size: 14px;
     display: inline-block;
     alignment: center;
+}
+
+#hidePoem {
+    display: none;
 }

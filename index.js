@@ -15,6 +15,7 @@ function invokePassage() {
     let i = getRandomIntInclusivePassages();
     document.getElementById("passageboxtext").innerHTML = passagesArray[i];
     document.getElementById("passageBox").style.display = "block";
+    document.getElementById('hidePoem').style.display = "block";
     if (document.getElementById("monkepic").style.display === "block") {
         document.getElementById("monkepic").style.display = "none";
     }
@@ -44,6 +45,7 @@ let showPoem = function () {
     let randomNumber = getRandomIntInclusive()
     document.getElementById("shownPoem").src = `./mcdatabase/poem(${randomNumber}).jpg`
     document.getElementById("monkepic").style.display = "block";
+    document.getElementById('hidePoem').style.display = "block";
     if (document.getElementById("passageBox").style.display === "block") {
         document.getElementById("passageBox").style.display = "none";
     }
@@ -53,11 +55,12 @@ invokeButton.onclick = showPoem;
 
 //HIDE POEM
 
-let hider = document.getElementsByClassName("hidePoem");
+let hider = document.getElementById('hidePoem');
 
 let hidePoem = function () {
     document.getElementById("monkepic").style.display = "none";
     document.getElementById("passageBox").style.display = "none";
+    document.getElementById('hidePoem').style.display = "none";
 }
 
 hider.onclick = hidePoem;
