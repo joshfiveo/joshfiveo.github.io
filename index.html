@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <title>Larry Snakes' Poem Emporium</title>
+    <audio src="./ciaman.mp3" id="musicTag"></audio>
+    <audio src="./ciaman.mp3" id="realMusicTag"></audio>
 </head>
 <body>
-<audio src="./ciaman.mp3" id="musicTag"></audio>
-<audio src="./ciaman.mp3" id="realMusicTag"></audio>
 <div class="heads">
     <h1>Welcome to Larry Snakes' Poem Emporium</h1>
     <h2><em>The</em> place for McEldritch poems.</h2>
@@ -32,19 +32,27 @@
     <div id="tbd">
         <button id="tbd1">???</button>
     </div>
+    <div id="passageBox" onclick="invokePassage()">
+        <h2 id="passageboxtext"></h2>
+    </div>
+    <div id="monkepic">
+        <img id="shownPoem" src="" alt="">
+    </div>
 </div>
 <div class="footer">
     <p>The poems were found on the streets of Aarhus in the summer of 2020. The creator of this website has no
         affilliation with, or knowledge of, the creator(s) of these poems.</p>
 </div>
-<div id="passageBox" onclick="invokePassage()">
-    <h2 id="passageboxtext"></h2>
-</div>
-<div id="monkepic">
-    <img id="shownPoem" src="" alt="">
-</div>
-<div class="hider">
-    <button id="hidePoem" onclick="hidePoem()">Hide [ESC]</button>
+<div id="bottomContainer">
+    <div class="hider">
+        <button id="hidePoem" onclick="hidePoem()">Hide [ESC]</button>
+    </div>
+    <div id="rerollDiv">
+        <button id="rerollButton" onclick="showPoem()">Reroll poem</button>
+    </div>
+    <div id="rerollDiv2">
+        <button id="rerollPassage" onclick="invokePassage()">Reroll line(s)</button>
+    </div>
 </div>
 <script src="index.js"></script>
 </body>

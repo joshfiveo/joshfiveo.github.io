@@ -16,6 +16,8 @@ function invokePassage() {
     document.getElementById("passageboxtext").innerHTML = passagesArray[i];
     document.getElementById("passageBox").style.display = "block";
     document.getElementById('hidePoem').style.display = "block";
+    document.getElementById('rerollPassage').style.display = "block";
+    document.getElementById('rerollButton').style.display = "none";
     if (document.getElementById("monkepic").style.display === "block") {
         document.getElementById("monkepic").style.display = "none";
     }
@@ -56,6 +58,8 @@ let showPoem = function () {
     document.getElementById("shownPoem").src = `./mcdatabase/poem(${randomNumber}).jpg`
     document.getElementById("monkepic").style.display = "block";
     document.getElementById('hidePoem').style.display = "block";
+    document.getElementById('rerollButton').style.display = "block";
+    document.getElementById('rerollPassage').style.display = "none";
     if (document.getElementById("passageBox").style.display === "block") {
         document.getElementById("passageBox").style.display = "none";
     }
@@ -71,6 +75,8 @@ let hidePoem = function () {
     document.getElementById("monkepic").style.display = "none";
     document.getElementById("passageBox").style.display = "none";
     document.getElementById('hidePoem').style.display = "none";
+    document.getElementById('rerollButton').style.display = "none";
+    document.getElementById('rerollPassage').style.display = "none";
 }
 
 hider.onclick = hidePoem;
