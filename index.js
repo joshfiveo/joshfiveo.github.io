@@ -37,6 +37,16 @@ let playMusic = function () {
 
 musicButtonJS.onclick = playMusic;
 
+// REAL MUSIC
+
+let realMusicButtonJS = document.getElementById('realMusicButton')
+
+let playRealMusic = function () {
+    document.getElementById('realMusicTag').play();
+}
+
+realMusicButtonJS.onclick = playRealMusic;
+
 //SHOW POEM
 
 let invokeButton = document.getElementsByClassName("invokeButton");

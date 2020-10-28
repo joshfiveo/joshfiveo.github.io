@@ -8,11 +8,15 @@
 </head>
 <body>
 <audio src="./ciaman.mp3" id="musicTag"></audio>
+<audio src="./ciaman.mp3" id="realMusicTag"></audio>
 <div class="heads">
     <h1>Welcome to Larry Snakes' Poem Emporium</h1>
     <h2><em>The</em> place for McEldritch poems.</h2>
 </div>
 <div class="container">
+    <div id="music">
+        <button id="musicButton">Who?</button>
+    </div>
     <div id="passage">
         <button class="passageButton" onclick="invokePassage()">SUMMON VIRTUOUS PASSAGE <br> [SPACE]</button>
     </div>
@@ -21,9 +25,6 @@
     </div>
     <div id="invokePoem">
         <button class="invokeButton" onclick="showPoem()">INVOKE POEM <br> [ENTER]</button>
-    </div>
-    <div id="music">
-        <button id="musicButton">Who?</button>
     </div>
     <div id="realMusic">
         <button id="realMusicButton">[OMINOUS WHOOSHING]</button>
