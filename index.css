@@ -111,7 +111,8 @@ img {
     text-transform: uppercase;
     max-height: 100%;
     max-width: 100%;
-    border: 3px white solid;
+    border: 3px solid;
+    border-color: hsl(0, 0%, 90%);
     border-radius: 6px;
 }
 
