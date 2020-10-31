@@ -102,9 +102,9 @@ img {
 }
 
 #passageboxtext {
+    margin-top: 10%;
     display: flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
     font-family: Cutive-mono, monospace;
     text-transform: uppercase;
