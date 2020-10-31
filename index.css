@@ -13,6 +13,7 @@ body {
     font-family: Cutive-mono, monospace;
     background-color: hsl(0, 0%, 5%);
     color: hsl(0, 0%, 90%);
+    font-weight: lighter;
 }
 
 .heads {
@@ -78,9 +79,13 @@ button:hover {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     display: none;
+    height: 100vh;
+    width: 100vw;
 }
 
 img {
+    display: block;
+    margin: auto;
     max-height: 100vh;
     max-width: 100vw;
 }
@@ -95,20 +100,19 @@ img {
     border-color: white;
     border-width: 3px;
     border-style: solid;
+    height: 100vh;
+    width: 100vw;
 }
 
 #passageboxtext {
     display: flex;
     justify-content: center;
-    margin-left: 10px;
-    margin-right: 10px;
+    align-items: center;
     text-align: center;
     font-family: Cutive-mono, monospace;
     text-transform: uppercase;
-    font-weight: lighter;
-    min-width: 50vw;
-    max-width: 90vw;
-    max-height: 90vh;
+    height: 100%;
+    width: 100%;
 }
 
 div {
