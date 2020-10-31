@@ -14,7 +14,7 @@ function getRandomIntInclusivePassages() {
 function invokePassage() {
     let i = getRandomIntInclusivePassages();
     document.getElementById("passageboxtext").innerHTML = passagesArray[i];
-    document.getElementById("passageBox").style.display = "block";
+    document.getElementById("passageBox").style.display = "flex";
     document.getElementById('hidePoem').style.display = "block";
     document.getElementById('rerollPassage').style.display = "block";
     document.getElementById('rerollButton').style.display = "none";

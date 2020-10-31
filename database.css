@@ -71,7 +71,7 @@ button {
     font-size: large;
     outline: none;
     border: 2px solid;
-    border-radius: 5px;
+    border-radius: 6px;
     transition-duration: 0.1s;
     cursor: pointer;
 }
