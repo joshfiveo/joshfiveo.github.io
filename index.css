@@ -79,7 +79,7 @@ button:hover {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     display: none;
-    height: 100vh;
+    height: 150vh;
     width: 100vw;
 }
 
@@ -97,7 +97,7 @@ img {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     display: none;
-    height: 100vh;
+    height: 150vh;
     width: 100vw;
     align-items: center;
     justify-content: center;
