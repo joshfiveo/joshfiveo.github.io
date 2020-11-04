@@ -29,6 +29,7 @@
     <title>Larry Snakes' Poem Emporium</title>
     <audio src="./ciaman.mp3" id="musicTag"></audio>
     <audio src="./ciaman.mp3" id="realMusicTag"></audio>
+    <audio src="./bbsounds/bbsound(1).wav" id="bbAudioTag"></audio>
 </head>
 <body>
 <div class="heads">
@@ -51,8 +52,11 @@
     <div id="realMusic">
         <button id="realMusicButton">[OMINOUS WHOOSHING]</button>
     </div>
-    <div id="tbd">
-        <button id="tbd1">???</button>
+    <div id="colourChange">
+        <button id="colourChangeButton" onclick="changeColourFunc()" onscroll="changeColourFunc()">Click me</button>
+    </div>
+    <div>
+        <button id="bloodborneSounds" onclick="playBbSounds()">Bloodborne sounds</button>
     </div>
     <div id="passageBox" onclick="invokePassage()">
         <h2 id="passageboxtext"></h2>

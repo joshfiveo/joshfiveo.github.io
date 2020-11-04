@@ -11,6 +11,10 @@ function getRandomIntInclusivePassages() {
     return Math.floor(Math.random() * passagesArray.length);
 }
 
+function colourNumber() {
+    return Math.floor(Math.random() * 361);
+}
+
 function invokePassage() {
     let i = getRandomIntInclusivePassages();
     document.getElementById("passageboxtext").innerHTML = passagesArray[i];
@@ -124,3 +128,30 @@ let ciaMan = function () {
     document.getElementById('shownPoem').src = "./ciaman.jpg";
     document.getElementById('monkepic').style.display = "block";
 }
+
+// COLOUR BUTTON
+
+let colourButton = document.getElementById('colourChangeButton');
+
+let changeColourFunc = function () {
+    document.getElementById('colourChangeButton').style.backgroundColor = `hsl(${colourNumber()}, 100%, 50%)`
+    document.getElementById('colourChangeButton').style.color = `hsl(${colourNumber()}, 100%, 50%)`;
+}
+
+colourButton.addEventListener('click', changeColourFunc);
+colourButton.addEventListener('wheel', changeColourFunc);
+
+// BB sounds
+
+function bbInteger () {
+    return Math.floor(Math.random * 119);
+}
+
+let bbButton = document.getElementById('bloodborneSounds');
+
+let playBbSounds = function () {
+    document.getElementById('bbAudioTag').src = `./bbsounds/bbsound(${bbInteger}).wav`
+    document.getElementById('bbAudioTag').play();
+}
+
+bbButton.onclick = playBbSounds;
