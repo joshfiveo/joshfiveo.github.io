@@ -144,13 +144,15 @@ colourButton.addEventListener('wheel', changeColourFunc);
 // BB sounds
 
 function bbInteger () {
-    return Math.floor(Math.random * 119);
+    return Math.floor(Math.random() * 119);
 }
 
 let bbButton = document.getElementById('bloodborneSounds');
 
 let playBbSounds = function () {
-    document.getElementById('bbAudioTag').src = `./bbsounds/bbsound(${bbInteger}).wav`
+    let integer = bbInteger()
+    let integerString = integer.toString()
+    document.getElementById('bbAudioTag').src = `./bbsounds/bbsound(${integerString}).wav`
     document.getElementById('bbAudioTag').play();
 }
 
