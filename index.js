@@ -157,3 +157,48 @@ let playBbSounds = function () {
 }
 
 bbButton.onclick = playBbSounds;
+
+//GORILLA AAAAAAAAAAAA
+
+function randomIntThreeSixty() {
+    return Math.floor(Math.random() * 361)
+}
+
+function randomIntThousand() {
+    return Math.floor(Math.random() * 1500)
+}
+
+function randomIntThree() {
+    return Math.floor(Math.random() * 3)
+}
+
+function changeBackground () {
+    document.body.style.backgroundColor = `hsl(${randomIntThreeSixty()}, 100%, 50%)` //`hsl(${randomIntThreeSixty}, 100%, 50%)`
+}
+
+let gorillaSource = ["./maleGorilla.jpg", "OOHOOH.jpg", "AAHAAH.jpg"];
+
+function createGorilla () {
+    let body = document.body;
+    let img1 = document.createElement('img')
+    body.prepend(img1)
+    img1.src = gorillaSource[randomIntThree()];
+    img1.setAttribute('id', 'gorilla');
+    document.getElementById('manScreaming').play();
+}
+
+function moveGorilla () {
+    document.getElementById('gorilla').src = gorillaSource[randomIntThree()];
+    document.getElementById('gorilla').style.width = `${randomIntThousand()}px`;
+    document.getElementById('gorilla').style.height = `${randomIntThousand()}px`;
+}
+
+function goInsane() {
+    createGorilla();
+    setInterval(changeBackground, 5);
+    setInterval(moveGorilla, 100);
+}
+
+let goInsaneButton = document.getElementById('goInsane');
+
+goInsaneButton.onclick = goInsane;

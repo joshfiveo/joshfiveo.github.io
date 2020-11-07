@@ -25,7 +25,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JOSHUA AND GORILLA WEBSITE" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -141,6 +141,9 @@
       <workItem from="1604518494732" duration="25000" />
       <workItem from="1604518686433" duration="91000" />
       <workItem from="1604569141436" duration="221000" />
+      <workItem from="1604574713693" duration="2185000" />
+      <workItem from="1604785673430" duration="15000" />
+      <workItem from="1604787032180" duration="1916000" />
     </task>
     <servers />
   </component>
@@ -148,10 +151,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1603973716988">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1604787071586">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603973716988" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604787071586" />
     <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1602437689876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
