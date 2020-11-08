@@ -34,7 +34,7 @@ li {
     transform: translate(-50%, -50%);
     display: none;
     width: 100vw;
-    height: 150vh;
+    height: 100vh;
 }
 
 img {
@@ -96,5 +96,16 @@ ul {
         display: grid;
         grid-template-rows: repeat(60, 1fr);
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    #monkepic {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        display: none;
+        width: 100vw;
+        height: 150vh;
     }
 }
