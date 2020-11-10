@@ -165,7 +165,7 @@ function randomIntThreeSixty() {
 }
 
 function randomIntThousand() {
-    return Math.floor(Math.random() * 1500)
+    return Math.floor(Math.random() * 1200) + 300;
 }
 
 function randomIntThree() {
