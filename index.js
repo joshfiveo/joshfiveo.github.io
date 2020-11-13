@@ -165,7 +165,7 @@ function randomIntThreeSixty() {
 }
 
 function randomIntThousand() {
-    return Math.floor(Math.random() * 1200) + 300;
+    return Math.floor(Math.random() * 90) + 25;
 }
 
 function randomIntThree() {
@@ -189,8 +189,8 @@ function createGorilla () {
 
 function moveGorilla () {
     document.getElementById('gorilla').src = gorillaSource[randomIntThree()];
-    document.getElementById('gorilla').style.width = `${randomIntThousand()}px`;
-    document.getElementById('gorilla').style.height = `${randomIntThousand()}px`;
+    document.getElementById('gorilla').style.width = `${randomIntThousand()}vw`;
+    document.getElementById('gorilla').style.height = `${randomIntThousand()}vh`;
 }
 
 function goInsane() {
