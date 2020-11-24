@@ -67,6 +67,7 @@ let randomLine = function(){
     let lines = document.createElement('p');
     lines.innerHTML = passagesArray[randomIntPassages()];
     lines.id = "lines";
+    lines.style.fontSize = "25px";
 
     //appending
     document.getElementById('poemImgDiv').appendChild(lines);
