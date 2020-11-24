@@ -44,6 +44,9 @@ h1, h2 {
         grid-template-rows: repeat(2, 1fr);
         grid-gap: 25px;
     }
+    img {
+        height: 75vh !important;
+    }
 }
 
 a {
