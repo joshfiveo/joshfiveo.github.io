@@ -25,7 +25,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../codeCampTwo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -42,6 +42,8 @@
       <workItem from="1606135504637" duration="30000" />
       <workItem from="1606198938708" duration="4146000" />
       <workItem from="1606212863121" duration="75000" />
+      <workItem from="1606241680575" duration="477000" />
+      <workItem from="1606242219319" duration="115000" />
     </task>
     <servers />
   </component>

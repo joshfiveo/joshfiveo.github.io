@@ -36,6 +36,16 @@ h1, h2 {
     grid-row-gap: 10px;
 }
 
+@media screen and (max-width: 15cm){
+    #buttonsContainer {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 25px;
+    }
+}
+
 a {
     border: 3px white solid;
     border-radius: 3px;
