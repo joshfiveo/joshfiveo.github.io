@@ -8,28 +8,30 @@ function randomIntPoems(){
 //get random poem
 let randomPoem = function(){
     //making img and setting src
-    let img = document.createElement('img');
-    img.id = "img";
+    if (document.getElementById('poemImgDiv').firstElementChild === null) {
+        let img = document.createElement('img');
+        img.id = "img";
 
-    img.src = `./mcdatabase/poem(${randomIntPoems()}).jpg`;
-    img.style.height = "100%";
+        img.src = `./mcdatabase/poem(${randomIntPoems()}).jpg`;
+        img.style.height = "100%";
 
-    //appending img to div and making div visible
-    document.getElementById('poemImgDiv').appendChild(img);
+        //appending img to div and making div visible
+        document.getElementById('poemImgDiv').appendChild(img);
 
-    document.getElementById('poemImgDiv').style.display = "block";
+        document.getElementById('poemImgDiv').style.display = "block";
 
-    //close button
-    let escape = document.createElement('button');
-    escape.innerHTML = "Close";
+        //close button
+        let escape = document.createElement('button');
+        escape.innerHTML = "Close";
 
-    //REROLL BUTTON
-    let reroll = document.createElement('button');
-    reroll.innerHTML = "reroll";
-    reroll.id = "reroll";
+        //REROLL BUTTON
+        let reroll = document.createElement('button');
+        reroll.innerHTML = "reroll";
+        reroll.id = "reroll";
 
-    document.body.appendChild(escape);
-    document.body.appendChild(reroll);
+        document.body.appendChild(escape);
+        document.body.appendChild(reroll);
+    }
 }
 
 let randomPoemButton = document.getElementById('randomPoem');
@@ -64,26 +66,46 @@ let randomLineButton = document.getElementById('randomLine');
 
 let randomLine = function(){
     //making paragraph and adding text
-    let lines = document.createElement('p');
-    lines.innerHTML = passagesArray[randomIntPassages()];
-    lines.id = "lines";
-    lines.style.fontSize = "25px";
+    if (document.getElementById('poemImgDiv').firstElementChild === null) {
+        let lines = document.createElement('p');
+        lines.innerHTML = passagesArray[randomIntPassages()];
+        lines.id = "lines";
+        lines.style.fontSize = "25px";
 
-    //appending
-    document.getElementById('poemImgDiv').appendChild(lines);
-    document.getElementById('poemImgDiv').style.display = "block";
+        //appending
+        document.getElementById('poemImgDiv').appendChild(lines);
+        document.getElementById('poemImgDiv').style.display = "block";
 
-    //close button
-    let escape = document.createElement('button');
-    escape.innerHTML = "Close";
+        //close button
+        let escape = document.createElement('button');
+        escape.innerHTML = "Close";
 
-    //REROLL BUTTON
-    let reroll = document.createElement('button');
-    reroll.innerHTML = "reroll";
-    reroll.id = "reroll";
+        //REROLL BUTTON
+        let reroll = document.createElement('button');
+        reroll.innerHTML = "reroll";
+        reroll.id = "reroll";
 
-    document.body.appendChild(escape);
-    document.body.appendChild(reroll);
+        document.body.appendChild(escape);
+        document.body.appendChild(reroll);
+    }
 }
 
 randomLineButton.addEventListener('click', randomLine);
+
+//Keyboard commands
+
+document.addEventListener("keydown", function (event) {
+    const key = event.key;
+    if (key === "Enter" && document.getElementById('poemImgDiv').firstElementChild.tagName === "P") {
+        document.getElementById('lines').innerHTML = passagesArray[randomIntPassages()];
+    }
+    if (key === "Enter" && document.getElementById('poemImgDiv').firstElementChild.tagName === "IMG") {
+        document.getElementById('img').src = `./mcdatabase/poem(${randomIntPoems()}).jpg`;
+    }
+    if (key === "Escape") {
+        document.getElementById('poemImgDiv').style.display = "none";
+        document.getElementById('poemImgDiv').firstElementChild.remove();
+        document.body.lastElementChild.remove();
+        document.body.lastElementChild.remove();
+    }
+});
