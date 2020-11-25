@@ -109,3 +109,13 @@ document.addEventListener("keydown", function (event) {
         document.body.lastElementChild.remove();
     }
 });
+
+// MUSIC
+
+let musicButton = document.getElementById('musicButton');
+
+let playMusic = function() {
+    document.getElementById('musicTag').play();
+}
+
+musicButton.addEventListener('click', playMusic);

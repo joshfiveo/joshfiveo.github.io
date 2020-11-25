@@ -4,11 +4,8 @@
 let makeButtons = function(){
     for (i = 1; i < 43; i++){
         let button = document.createElement('a');
-        let text = document.createElement('p')
-        text.innerHTML = `Poem ${i}`;
-        button.href = "#";
+        button.innerHTML = `Poem ${i}`;
 
-        button.appendChild(text);
         document.getElementById('poemsContainer').appendChild(button);
     }
 }

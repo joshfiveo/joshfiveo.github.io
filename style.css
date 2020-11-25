@@ -65,9 +65,16 @@ a {
 }
 
 p {
-    padding-bottom: 10px;
-    padding-top: 10px;
+    height: 100%;
+    width: 100%;
 }
+
+a:hover {
+    background-color: darkgray;
+    color: black;
+    cursor: pointer;
+}
+
 
 footer {
     width: 100%;
