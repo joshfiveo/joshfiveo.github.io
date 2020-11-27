@@ -38,7 +38,7 @@ h1, h2 {
 
 @media screen and (max-width: 15cm){
     #buttonsContainer {
-        margin-top: 100px;
+        margin-top: 20px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -50,13 +50,11 @@ h1, h2 {
     }
 
     #lines {
-        padding-top: 50px;
-        padding-bottom: 300px;
+        padding-top: 30px;
     }
 
     #footerText {
         width: 100%;
-        margin: auto;
         text-align: center;
     }
 }
