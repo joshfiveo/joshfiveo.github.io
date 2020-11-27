@@ -45,6 +45,12 @@ h1, h2 {
         grid-gap: 25px;
     }
 
+    #poemsContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(21, 1fr);
+    }
+
     img {
         height: 75vh !important;
     }
@@ -55,7 +61,8 @@ h1, h2 {
 
     #footerText {
         width: 100%;
-        text-align: center;
+        padding: 0;
+        margin: 0;
     }
 }
 
