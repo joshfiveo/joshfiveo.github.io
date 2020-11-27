@@ -50,8 +50,14 @@ h1, h2 {
     }
 
     #lines {
-        padding-top: 150px;
+        padding-top: 50px;
         padding-bottom: 300px;
+    }
+
+    #footerText {
+        width: 100%;
+        margin: auto;
+        text-align: center;
     }
 }
 
@@ -75,11 +81,16 @@ a:hover {
     cursor: pointer;
 }
 
-
 footer {
     width: 100%;
     position: fixed;
-    bottom: 10px;
+    bottom: 25px;
+}
+
+#footerText {
+    width: 55%;
+    margin: auto;
+    text-align: center;
 }
 
 #poemImgDiv {

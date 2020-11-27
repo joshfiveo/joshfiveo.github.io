@@ -25,6 +25,10 @@ let showPoem = function(event){
     srcNr = parseInt(poemNrRefined);
     img.id = "img";
 
+    //Head
+    let headTitle = document.querySelector('title');
+    headTitle.innerHTML = event.target.innerHTML;
+
     img.src = `./mcdatabase/poem(${poemNrRefined}).jpg`;
     img.style.height = "100%";
 
@@ -65,12 +69,24 @@ let hidePoem = function(event){
         document.body.lastElementChild.remove();
         document.body.lastElementChild.remove();
         document.body.lastElementChild.remove();
+
+        //Head
+        let headTitle = document.querySelector('title');
+        headTitle.innerHTML = "Larry's Archives";
     } else if (event.target.id === "next" && srcNr !== 42){
         srcNr++;
         document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
+
+        //Head
+        let headTitle = document.querySelector('title');
+        headTitle.innerHTML = `Poem ${srcNr}`;
     } else if (event.target.id === "prev" && srcNr !== 1){
         srcNr--;
         document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
+
+        //Head
+        let headTitle = document.querySelector('title');
+        headTitle.innerHTML = `Poem ${srcNr}`;
     }
 }
 
@@ -80,10 +96,18 @@ document.addEventListener("keydown", function (event) {
     if (key === "ArrowRight" && srcNr !== 42) {
         srcNr++;
         document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
+
+        //Head
+        let headTitle = document.querySelector('title');
+        headTitle.innerHTML = `Poem ${srcNr}`;
     }
     if (key === "ArrowLeft" && srcNr !== 1) {
         srcNr--;
         document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
+
+        //Head
+        let headTitle = document.querySelector('title');
+        headTitle.innerHTML = `Poem ${srcNr}`;
     }
     if (key === "Escape") {
         document.getElementById('poemImgDiv').style.display = "none";
@@ -91,5 +115,9 @@ document.addEventListener("keydown", function (event) {
         document.body.lastElementChild.remove();
         document.body.lastElementChild.remove();
         document.body.lastElementChild.remove();
+
+        //Head
+        let headTitle = document.querySelector('title');
+        headTitle.innerHTML = "Larry's Archives";
     }
 });
