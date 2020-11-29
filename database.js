@@ -2,9 +2,10 @@
 
 // Making buttons
 let makeButtons = function(){
-    for (i = 1; i < 43; i++){
+    for (i = 1; i < 43; i++){ //Need to change in case of more poems
         let button = document.createElement('a');
         button.innerHTML = `Poem ${i}`;
+        button.setAttribute('data-value', `${i}`);
 
         document.getElementById('poemsContainer').appendChild(button);
     }
@@ -20,16 +21,15 @@ let poemButtons = document.getElementsByTagName('a');
 let showPoem = function(event){
     //making img and setting src
     let img = document.createElement('img');
-    let poemNr = event.target.innerHTML;
-    let poemNrRefined = poemNr.replace(/\D/g,'');
-    srcNr = parseInt(poemNrRefined);
+    let poemNr = event.target.getAttribute('data-value');
+    srcNr = poemNr;
     img.id = "img";
 
     //Head
     let headTitle = document.querySelector('title');
     headTitle.innerHTML = event.target.innerHTML;
 
-    img.src = `./mcdatabase/poem(${poemNrRefined}).jpg`;
+    img.src = `./mcdatabase/poem(${poemNr}).jpg`;
     img.style.height = "100%";
 
     //appending img to div and making div visible
@@ -62,6 +62,10 @@ window.addEventListener('load', function (){
     }
 });
 
+
+// HIDER
+
+
 let hidePoem = function(event){
     if (event.target.innerHTML === "Close") {
         document.getElementById('poemImgDiv').style.display = "none";
@@ -73,7 +77,7 @@ let hidePoem = function(event){
         //Head
         let headTitle = document.querySelector('title');
         headTitle.innerHTML = "Larry's Archives";
-    } else if (event.target.id === "next" && srcNr !== 42){
+    } else if (event.target.id === "next" && srcNr !== 42){ //Need to change if more poems
         srcNr++;
         document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
 
@@ -93,7 +97,7 @@ let hidePoem = function(event){
 document.addEventListener('click', hidePoem);
 document.addEventListener("keydown", function (event) {
     const key = event.key;
-    if (key === "ArrowRight" && srcNr !== 42) {
+    if (key === "ArrowRight" && srcNr !== 42) { //Need to change if more poems
         srcNr++;
         document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
 

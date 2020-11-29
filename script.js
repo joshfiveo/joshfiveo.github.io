@@ -1,8 +1,8 @@
 //INDEX TING
 
 //Random integer
-function randomIntPoems(){
-    return Math.floor(Math.random() * 42) + 1;
+function randomIntPoems(){ //amount of poem documents
+    return Math.floor(Math.random() * 42) + 1; //Need to change if more poems
 }
 
 //get random poem
