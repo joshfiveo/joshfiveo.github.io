@@ -59,9 +59,9 @@ randomPoemButton.addEventListener('click', randomPoem);
 let hidePoem = function(event){
     if (event.target.innerHTML === "Close") {
         document.getElementById('poemImgDiv').style.display = "none";
-        document.getElementById('poemImgDiv').firstElementChild.remove();
-        document.getElementById('poemImgDiv').firstElementChild.remove();
-        document.getElementById('poemImgDiv').firstElementChild.remove();
+        while (document.getElementById('poemImgDiv').firstElementChild !== null) {
+            document.getElementById('poemImgDiv').firstElementChild.remove();
+        }
         document.body.lastElementChild.remove();
         document.body.lastElementChild.remove();
     } else if (event.target.innerHTML === "reroll" && document.getElementById('poemImgDiv').firstElementChild.tagName === "IMG"){
@@ -126,9 +126,9 @@ document.addEventListener("keydown", function (event) {
     }
     if (key === "Escape") {
         document.getElementById('poemImgDiv').style.display = "none";
-        document.getElementById('poemImgDiv').firstElementChild.remove();
-        document.getElementById('poemImgDiv').firstElementChild.remove();
-        document.getElementById('poemImgDiv').firstElementChild.remove();
+        while (document.getElementById('poemImgDiv').firstElementChild !== null) {
+            document.getElementById('poemImgDiv').firstElementChild.remove();
+        }
         document.body.lastElementChild.remove();
         document.body.lastElementChild.remove();
     }
