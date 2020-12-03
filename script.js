@@ -6,13 +6,16 @@ function randomIntPoems(){ //amount of poem documents
 }
 
 //get random poem
+let srcNr;
+
 let randomPoem = function(){
     //making img and setting src
     if (document.getElementById('poemImgDiv').firstElementChild === null) {
         let img = document.createElement('img');
         img.id = "img";
 
-        img.src = `./mcdatabase/poem(${randomIntPoems()}).jpg`;
+        srcNr = randomIntPoems();
+        img.src = `./mcdatabase/poem(${srcNr}).jpg`;
         img.style.height = "100%";
 
         //appending img to div and making div visible
@@ -29,8 +32,21 @@ let randomPoem = function(){
         reroll.innerHTML = "reroll";
         reroll.id = "reroll";
 
+        //<a>'s
+        let poemNrText = document.createElement('p');
+        poemNrText.innerHTML = 'P <br> O <br> E <br> M';
+        poemNrText.id = "poemNrText";
+
+        //<a>'s
+        let poemNrTextTwo = document.createElement('p');
+        poemNrTextTwo.innerHTML = `${srcNr}`;
+        poemNrTextTwo.id = "poemNrTextTwo";
+
         document.body.appendChild(escape);
         document.body.appendChild(reroll);
+        document.getElementById('poemImgDiv').appendChild(poemNrText);
+        document.getElementById('poemImgDiv').appendChild(poemNrTextTwo);
+
     }
 }
 
@@ -44,10 +60,14 @@ let hidePoem = function(event){
     if (event.target.innerHTML === "Close") {
         document.getElementById('poemImgDiv').style.display = "none";
         document.getElementById('poemImgDiv').firstElementChild.remove();
+        document.getElementById('poemImgDiv').firstElementChild.remove();
+        document.getElementById('poemImgDiv').firstElementChild.remove();
         document.body.lastElementChild.remove();
         document.body.lastElementChild.remove();
     } else if (event.target.innerHTML === "reroll" && document.getElementById('poemImgDiv').firstElementChild.tagName === "IMG"){
-        document.getElementById('img').src = `./mcdatabase/poem(${randomIntPoems()}).jpg`;
+        srcNr = randomIntPoems();
+        document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
+        document.getElementById('poemNrTextTwo').innerHTML = `${srcNr}`;
     } else if (event.target.innerHTML === "reroll" && document.getElementById('poemImgDiv').firstElementChild.tagName === "P"){
         document.getElementById('poemImgDiv').firstElementChild.innerHTML = passagesArray[randomIntPassages()];
     }
@@ -100,10 +120,14 @@ document.addEventListener("keydown", function (event) {
         document.getElementById('lines').innerHTML = passagesArray[randomIntPassages()];
     }
     if (key === "Enter" && document.getElementById('poemImgDiv').firstElementChild.tagName === "IMG") {
-        document.getElementById('img').src = `./mcdatabase/poem(${randomIntPoems()}).jpg`;
+        srcNr = randomIntPoems();
+        document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
+        document.getElementById('poemNrTextTwo').innerHTML = `${srcNr}`;
     }
     if (key === "Escape") {
         document.getElementById('poemImgDiv').style.display = "none";
+        document.getElementById('poemImgDiv').firstElementChild.remove();
+        document.getElementById('poemImgDiv').firstElementChild.remove();
         document.getElementById('poemImgDiv').firstElementChild.remove();
         document.body.lastElementChild.remove();
         document.body.lastElementChild.remove();

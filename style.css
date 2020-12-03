@@ -67,7 +67,7 @@ h1, h2 {
 
 a {
     border: 3px white solid;
-    border-radius: 3px;
+    border-radius: 5px;
     height: 60px;
     width: 150px;
     text-decoration: none;
@@ -115,8 +115,14 @@ button {
     width: 55px;
     height: 25px;
     border: white solid 2px;
-    border-radius: 3px;
+    border-radius: 5px;
     box-shadow: none;
+}
+
+button:hover {
+    background-color: darkgray;
+    color: black;
+    cursor: pointer;
 }
 
 #next {
@@ -152,4 +158,27 @@ button {
 #lines {
     padding-top: 300px;
     padding-bottom: 300px;
+}
+
+#poemNrText {
+    font-size: 100px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: 100%;
+    width: 100px;
+}
+
+#poemNrTextTwo {
+    font-size: 100px;
+    position: fixed;
+    bottom: 50px;
+    left: 10px;
+    height: 100px;
+    width: 100px;
+}
+
+img {
+    margin: 0 auto;
+    display: inline-block;
 }
