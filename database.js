@@ -157,12 +157,14 @@ function moveTouch(e) {
 
     if (Math.abs(diffX) > Math.abs(diffY)) {
         // sliding horizontally
-        if (diffX > 0) {
+        if (diffX > 0 && srcNr !== 42) {
             // swiped left
-            prev();
+            next();
         } else {
             // swiped right
-            next();
+            if (srcNr !== 1) {
+                prev();
+            }
         }
     } else {
         // sliding vertically
