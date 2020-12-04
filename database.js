@@ -1,5 +1,38 @@
 // DATABASE STUFF
 
+//Generic functions (next, prev, and close poems)
+function next(){
+    //new src
+    srcNr++;
+    document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
+
+    //Head
+    let headTitle = document.querySelector('title');
+    headTitle.innerHTML = `Poem ${srcNr}`;
+}
+
+function prev(){
+    //new src
+    srcNr--;
+    document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
+
+    //Head
+    let headTitle = document.querySelector('title');
+    headTitle.innerHTML = `Poem ${srcNr}`;
+}
+
+function close(){
+    document.getElementById('poemImgDiv').style.display = "none";
+    document.getElementById('poemImgDiv').firstElementChild.remove();
+    document.body.lastElementChild.remove();
+    document.body.lastElementChild.remove();
+    document.body.lastElementChild.remove();
+
+    //Head
+    let headTitle = document.querySelector('title');
+    headTitle.innerHTML = "Larry's Archives";
+}
+
 // Making buttons
 let makeButtons = function(){
     for (i = 1; i < 43; i++){ //Need to change in case of more poems
@@ -63,34 +96,16 @@ window.addEventListener('load', function (){
 });
 
 
-// HIDER
+// HIDER and next and prev
 
 
 let hidePoem = function(event){
     if (event.target.innerHTML === "Close") {
-        document.getElementById('poemImgDiv').style.display = "none";
-        document.getElementById('poemImgDiv').firstElementChild.remove();
-        document.body.lastElementChild.remove();
-        document.body.lastElementChild.remove();
-        document.body.lastElementChild.remove();
-
-        //Head
-        let headTitle = document.querySelector('title');
-        headTitle.innerHTML = "Larry's Archives";
+        close();
     } else if (event.target.id === "next" && srcNr !== 42){ //Need to change if more poems
-        srcNr++;
-        document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
-
-        //Head
-        let headTitle = document.querySelector('title');
-        headTitle.innerHTML = `Poem ${srcNr}`;
+        next();
     } else if (event.target.id === "prev" && srcNr !== 1){
-        srcNr--;
-        document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
-
-        //Head
-        let headTitle = document.querySelector('title');
-        headTitle.innerHTML = `Poem ${srcNr}`;
+        prev();
     }
 }
 
@@ -98,30 +113,70 @@ document.addEventListener('click', hidePoem);
 document.addEventListener("keydown", function (event) {
     const key = event.key;
     if (key === "ArrowRight" && srcNr !== 42) { //Need to change if more poems
-        srcNr++;
-        document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
-
-        //Head
-        let headTitle = document.querySelector('title');
-        headTitle.innerHTML = `Poem ${srcNr}`;
+        next();
     }
     if (key === "ArrowLeft" && srcNr !== 1) {
-        srcNr--;
-        document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
-
-        //Head
-        let headTitle = document.querySelector('title');
-        headTitle.innerHTML = `Poem ${srcNr}`;
+        prev();
     }
     if (key === "Escape") {
-        document.getElementById('poemImgDiv').style.display = "none";
-        document.getElementById('poemImgDiv').firstElementChild.remove();
-        document.body.lastElementChild.remove();
-        document.body.lastElementChild.remove();
-        document.body.lastElementChild.remove();
-
-        //Head
-        let headTitle = document.querySelector('title');
-        headTitle.innerHTML = "Larry's Archives";
+        close();
     }
 });
+
+
+// SWIPE SHIT
+
+var container = document.querySelector("#poemImgDiv");
+
+container.addEventListener("touchstart", startTouch, false);
+container.addEventListener("touchmove", moveTouch, false);
+
+// Swipe Up / Down / Left / Right
+var initialX = null;
+var initialY = null;
+
+function startTouch(e) {
+    initialX = e.touches[0].clientX;
+    initialY = e.touches[0].clientY;
+}
+
+function moveTouch(e) {
+    if (initialX === null) {
+        return;
+    }
+
+    if (initialY === null) {
+        return;
+    }
+
+    var currentX = e.touches[0].clientX;
+    var currentY = e.touches[0].clientY;
+
+    var diffX = initialX - currentX;
+    var diffY = initialY - currentY;
+
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+        // sliding horizontally
+        if (diffX > 0) {
+            // swiped left
+            prev();
+        } else {
+            // swiped right
+            next();
+        }
+    } else {
+        // sliding vertically
+        if (diffY > 0) {
+            // swiped up
+            console.log("swiped up");
+        } else {
+            // swiped down
+            console.log("swiped down");
+        }
+    }
+
+    initialX = null;
+    initialY = null;
+
+    e.preventDefault();
+}
