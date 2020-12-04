@@ -1,4 +1,5 @@
 // DATABASE STUFF
+let srcNr;
 
 //Generic functions (next, prev, and close poems)
 function next(){
@@ -47,7 +48,6 @@ let makeButtons = function(){
 window.onload = makeButtons;
 
 //Clicking poem button
-let srcNr;
 
 let poemButtons = document.getElementsByTagName('a');
 
@@ -55,7 +55,7 @@ let showPoem = function(event){
     //making img and setting src
     let img = document.createElement('img');
     let poemNr = event.target.getAttribute('data-value');
-    srcNr = poemNr;
+    srcNr = parseInt(poemNr);
     img.id = "img";
 
     //Head
