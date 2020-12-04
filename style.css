@@ -63,6 +63,18 @@ h1, h2 {
         width: 100vw;
         text-align: center;
     }
+
+    #img {
+        width: 90vw;
+    }
+
+    #poemNrText {
+        display: none;
+    }
+
+    #poemNrTextTwo {
+        display: none;
+    }
 }
 
 a {
@@ -182,3 +194,4 @@ img {
     margin: 0 auto;
     display: inline-block;
 }
+

@@ -32,12 +32,12 @@ let randomPoem = function(){
         reroll.innerHTML = "reroll";
         reroll.id = "reroll";
 
-        //<a>'s
+        //<p>'s
         let poemNrText = document.createElement('p');
         poemNrText.innerHTML = 'P <br> O <br> E <br> M';
         poemNrText.id = "poemNrText";
 
-        //<a>'s
+        //<p>'s
         let poemNrTextTwo = document.createElement('p');
         poemNrTextTwo.innerHTML = `${srcNr}`;
         poemNrTextTwo.id = "poemNrTextTwo";
