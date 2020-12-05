@@ -1,5 +1,26 @@
 //INDEX TING
 
+//button functions
+function close(){
+    document.getElementById('poemImgDiv').style.display = "none";
+    while (document.getElementById('poemImgDiv').firstElementChild !== null) {
+        document.getElementById('poemImgDiv').firstElementChild.remove();
+    }
+    while (document.body.lastElementChild.tagName === "BUTTON") {
+        document.body.lastElementChild.remove();
+    }
+}
+
+function rerollImg(){
+    srcNr = randomIntPoems();
+    document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
+    document.getElementById('poemNrTextTwo').innerHTML = `${srcNr}`;
+}
+
+function rerollP(){
+    document.getElementById('poemImgDiv').firstElementChild.innerHTML = passagesArray[randomIntPassages()];
+}
+
 //Random integer
 function randomIntPoems(){ //amount of poem documents
     return Math.floor(Math.random() * 42) + 1; //Need to change if more poems
@@ -58,18 +79,11 @@ randomPoemButton.addEventListener('click', randomPoem);
 
 let hidePoem = function(event){
     if (event.target.innerHTML === "Close") {
-        document.getElementById('poemImgDiv').style.display = "none";
-        while (document.getElementById('poemImgDiv').firstElementChild !== null) {
-            document.getElementById('poemImgDiv').firstElementChild.remove();
-        }
-        document.body.lastElementChild.remove();
-        document.body.lastElementChild.remove();
+        close();
     } else if (event.target.innerHTML === "reroll" && document.getElementById('poemImgDiv').firstElementChild.tagName === "IMG"){
-        srcNr = randomIntPoems();
-        document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
-        document.getElementById('poemNrTextTwo').innerHTML = `${srcNr}`;
+        rerollImg();
     } else if (event.target.innerHTML === "reroll" && document.getElementById('poemImgDiv').firstElementChild.tagName === "P"){
-        document.getElementById('poemImgDiv').firstElementChild.innerHTML = passagesArray[randomIntPassages()];
+        rerollP();
     }
 }
 
@@ -117,20 +131,13 @@ randomLineButton.addEventListener('click', randomLine);
 document.addEventListener("keydown", function (event) {
     const key = event.key;
     if (key === "Enter" && document.getElementById('poemImgDiv').firstElementChild.tagName === "P") {
-        document.getElementById('lines').innerHTML = passagesArray[randomIntPassages()];
+        rerollP();
     }
     if (key === "Enter" && document.getElementById('poemImgDiv').firstElementChild.tagName === "IMG") {
-        srcNr = randomIntPoems();
-        document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
-        document.getElementById('poemNrTextTwo').innerHTML = `${srcNr}`;
+        rerollImg();
     }
     if (key === "Escape") {
-        document.getElementById('poemImgDiv').style.display = "none";
-        while (document.getElementById('poemImgDiv').firstElementChild !== null) {
-            document.getElementById('poemImgDiv').firstElementChild.remove();
-        }
-        document.body.lastElementChild.remove();
-        document.body.lastElementChild.remove();
+        close();
     }
 });
 

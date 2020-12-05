@@ -25,9 +25,9 @@ function prev(){
 function close(){
     document.getElementById('poemImgDiv').style.display = "none";
     document.getElementById('poemImgDiv').firstElementChild.remove();
-    document.body.lastElementChild.remove();
-    document.body.lastElementChild.remove();
-    document.body.lastElementChild.remove();
+    while (document.body.lastElementChild.tagName === "BUTTON") {
+        document.body.lastElementChild.remove();
+    }
 
     //Head
     let headTitle = document.querySelector('title');
