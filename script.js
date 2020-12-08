@@ -130,7 +130,7 @@ randomLineButton.addEventListener('click', randomLine);
 
 document.addEventListener("keydown", function (event) {
     const key = event.key;
-    if (key === "Enter" && document.getElementById('poemImgDiv').firstElementChild.tagName === "P") {
+    if (key === "Enter" && document.getElementById('poemImgDiv').firstElementChild.tagName === "P" && document.body.lastElementChild.innerHTML === "reroll") {
         rerollP();
     }
     if (key === "Enter" && document.getElementById('poemImgDiv').firstElementChild.tagName === "IMG") {
@@ -142,7 +142,7 @@ document.addEventListener("keydown", function (event) {
 });
 
 // MUSIC
-
+/*
 let musicButton = document.getElementById('musicButton');
 
 let playMusic = function() {
@@ -150,3 +150,44 @@ let playMusic = function() {
 }
 
 musicButton.addEventListener('click', playMusic);
+*/
+//SEARCH FUNCTION
+let form = document.getElementById('form');
+
+let searchArray = function (event) {
+    let formInput = document.getElementById('formInput').value;
+    let passageReturned;
+    console.log(formInput);
+
+    if (formInput !== '') {
+        for (i = 0; i < passagesArray.length; i++) {
+            if (passagesArray[i].includes(formInput)) {
+                let lines = document.createElement('p');
+                lines.innerHTML = passagesArray[i];
+                lines.id = "lines";
+                lines.style.fontSize = "25px";
+
+                //appending
+                document.getElementById('poemImgDiv').appendChild(lines);
+                document.getElementById('poemImgDiv').style.display = "block";
+
+                //close button
+                let escape = document.createElement('button');
+                escape.innerHTML = "Close";
+
+                document.body.appendChild(escape);
+
+                passageReturned = true;
+            }
+        }
+
+        if (passageReturned !== true) {
+            alert(`No passage with keyword "${formInput}" found, hoebag.`);
+        }
+    }
+
+    form.reset();
+    event.preventDefault();
+}
+
+form.addEventListener('submit', searchArray);
