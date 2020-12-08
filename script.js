@@ -157,7 +157,6 @@ let form = document.getElementById('form');
 let searchArray = function (event) {
     let formInput = document.getElementById('formInput').value;
     let passageReturned;
-    console.log(formInput);
 
     if (formInput !== '') {
         for (i = 0; i < passagesArray.length; i++) {
@@ -167,15 +166,16 @@ let searchArray = function (event) {
                 lines.id = "lines";
                 lines.style.fontSize = "25px";
 
-                //appending
-                document.getElementById('poemImgDiv').appendChild(lines);
-                document.getElementById('poemImgDiv').style.display = "block";
-
                 //close button
                 let escape = document.createElement('button');
                 escape.innerHTML = "Close";
 
-                document.body.appendChild(escape);
+                //appending
+                if (document.getElementById('poemImgDiv').firstElementChild === null) {
+                    document.getElementById('poemImgDiv').appendChild(lines);
+                    document.getElementById('poemImgDiv').style.display = "block";
+                    document.body.appendChild(escape);
+                }
 
                 passageReturned = true;
             }
