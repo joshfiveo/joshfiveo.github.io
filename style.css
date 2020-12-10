@@ -15,25 +15,25 @@
 }
 
 h1, h2 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 1em;
 }
 
 #buttonsContainer {
-    margin-top: 100px;
+    margin-top: 5em;
+    margin-bottom: 5em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 100px;
+    grid-gap: 4em;
 }
 
 #poemsContainer {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 3em;
+    margin-bottom: 3em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(11, 1fr);
-    grid-row-gap: 10px;
+    grid-row-gap: 1em;
 }
 
 @media only screen and (max-width: 14cm){
@@ -80,13 +80,13 @@ h1, h2 {
 a {
     border: 3px white solid;
     border-radius: 5px;
-    height: 60px;
-    width: 150px;
+    height: 4em;
+    width: 10em;
     text-decoration: none;
     margin: 0 auto;
 }
 
-p {
+#footerText {
     height: 100%;
     width: 100%;
 }
@@ -104,7 +104,7 @@ footer {
 }
 
 #footerText {
-    width: 65vw;
+    width: 100%;
     margin: auto;
     text-align: center;
 }
@@ -173,7 +173,7 @@ button:hover {
 }
 
 #poemNrText {
-    font-size: 100px;
+    font-size: 70px;
     position: fixed;
     top: 10px;
     left: 10px;
@@ -182,7 +182,7 @@ button:hover {
 }
 
 #poemNrTextTwo {
-    font-size: 100px;
+    font-size: 75px;
     position: fixed;
     bottom: 50px;
     left: 10px;
@@ -199,4 +199,8 @@ input[type=text] {
     border: 2px solid white;
     border-radius: 5px;
     outline: none;
+}
+
+p {
+    margin-bottom: 1em;
 }
