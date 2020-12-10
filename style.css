@@ -165,6 +165,7 @@ button:hover {
     z-index: 1;
     width: 55px;
     height: 25px;
+    outline: none;
 }
 
 #lines {
