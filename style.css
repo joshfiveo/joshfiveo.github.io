@@ -52,7 +52,7 @@ h1, h2 {
     }
 
     img {
-        height: 75vh !important;
+        height: 95vh !important;
     }
 
     #lines {
@@ -64,8 +64,8 @@ h1, h2 {
         text-align: center;
     }
 
-    #img {
-        width: 90vw;
+    #imgDatabase {
+        width: 95vw;
     }
 
     #poemNrText {
@@ -73,6 +73,10 @@ h1, h2 {
     }
 
     #poemNrTextTwo {
+        display: none;
+    }
+
+    #poemText {
         display: none;
     }
 }
@@ -226,4 +230,9 @@ p {
     display: inline-block;
     width: 50%;
     font-size: 28px;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
 }
