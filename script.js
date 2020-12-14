@@ -1,5 +1,24 @@
 //INDEX TING
 
+let textArray = ["zeroDoesntExist",
+    "There was a man who was curly / with effort he also burly / he fought back against coomers / no patience with boomers / of spirits he was a consoomer /// m'bosso he was a grand lad / he could fuck up a big ass Brad / with a big ass meat stick / dick is soup-can thicc / he could spitroast even great chud /// asses to asses, dusk to dusk (?) / a dick like an elephant tusk / to spitroast a bitch / to scratch a great itch / he fuck like the great Elon Musk",
+    "Ode to Strr: a dagger or rapier perhaps? / Hark! No! that would make us dex-fags! / i have one rule Brr / i spend all souls on Strr / big pecs = big check and fat stacks",
+    "i ain't never seen no swine like them there pigs / ain't swindling no kindling, throwing pearls for pigs / louisana pedo don't need door / he smash the walls, and breaks you like a twig / proud mullet wearin redneck, but aint no hick / sees doors of perception, minds drifts ashore / consooms copious kegs, coors light galore / a southern Zarathustra, moonshine he swigs / black cop be like, 'missing persons, lol, sike!' / he dont believe, so aint no reprieve, for steve / he gon' be dead, made into cornbread / pedos and swamp things I with my knife strike / it's raining chainsaws in the Quoral Quee / the quota of beer / oh what a relief / we'll reach it / just grind up the dead",
+    "his beastly was a snarlin' / he found himself a cute darlin' / to plow with his stick / until he was sick / with his dick he was himself harmin' /// there once was a dog from the sea / a danm man, everybody can see / he completed uncharted / 'tis so retarded / but based and redpill'd stay'd he /// there once was an african dog / who fearlessly braved the boss-fog / he challeng'd the boss / without purple moss / and never gave the singlest of fuck",
+    "covertly concealed his constipation"
+]
+
+let poemsArray = [];
+
+for (i=1;i<43;i++){
+    poemsArray.push(
+        {
+            poemNr: `${i}`,
+            poemSrc: `./mcdatabase/poem(${i}).jpg`,
+            poemText: textArray[i]
+        });
+}
+
 //button functions
 function close(){
     document.getElementById('poemImgDiv').style.display = "none";
@@ -24,6 +43,10 @@ function rerollP(){
 //Random integer
 function randomIntPoems(){ //amount of poem documents
     return Math.floor(Math.random() * 42) + 1; //Need to change if more poems
+}
+
+function randomTextInt(){
+    return Math.floor(Math.random() * 5) + 1; //Need to change if more poems
 }
 
 //get random poem
@@ -191,3 +214,27 @@ let searchArray = function (event) {
 }
 
 form.addEventListener('submit', searchArray);
+
+// get text poem
+
+let textPoemButton = document.getElementById('poemsText');
+
+function textPoem(){
+    if (document.getElementById('poemImgDiv').firstElementChild === null) {
+        let lines = document.createElement('p');
+        lines.innerHTML = textArray[randomTextInt()];
+        lines.id = "lines";
+        lines.style.fontSize = "25px";
+
+        //appending
+        document.getElementById('poemImgDiv').appendChild(lines);
+        document.getElementById('poemImgDiv').style.display = "block";
+
+        //close button
+        let escape = document.createElement('button');
+        escape.innerHTML = "Close";
+
+        document.body.appendChild(escape);
+}}
+
+textPoemButton.addEventListener('click', textPoem);

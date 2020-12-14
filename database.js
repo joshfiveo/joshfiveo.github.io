@@ -1,6 +1,21 @@
 // DATABASE STUFF
 let srcNr;
 
+let textArray = ["zeroDoesntExist", "There was a man who was curly / with effort he also burly / he fought back against coomers / no patience with boomers / of spirits he was a consoomer /// m'bosso he was a grand lad / he could fuck up a big ass Brad / with a big ass meat stick / dick is soup-can thicc / he could spitroast even great chud /// asses to asses, dusk to dusk (?) / a dick like an elephant tusk / to spitroast a bitch / to scratch a great itch / he fuck like the great Elon Musk", ""]
+
+let poemsArray = [];
+
+for (i=1;i<43;i++){
+    poemsArray.push(
+        {
+            poemNr: `${i}`,
+            poemSrc: `./mcdatabase/poem(${i}).jpg`,
+            poemText: textArray[i]
+        });
+}
+
+console.log(poemsArray);
+
 //Generic functions (next, prev, and close poems)
 function next(){
     //new src
