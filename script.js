@@ -68,7 +68,6 @@ let randomPoem = function(){
 
         srcNr = randomIntPoems();
         img.src = `./mcdatabase/poem(${srcNr}).jpg`;
-        img.style.height = "100%";
 
         //appending img to div and making div visible
         document.getElementById('poemImgDiv').appendChild(img);

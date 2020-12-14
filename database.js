@@ -26,7 +26,7 @@ console.log(poemsArray);
 function next(){
     //new src
     srcNr++;
-    document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
+    document.getElementById('imgDatabase').src = `./mcdatabase/poem(${srcNr}).jpg`;
     document.getElementById('poemText').innerHTML = textArray[srcNr];
     console.log(textArray[srcNr]);
 
@@ -38,7 +38,7 @@ function next(){
 function prev(){
     //new src
     srcNr--;
-    document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
+    document.getElementById('imgDatabase').src = `./mcdatabase/poem(${srcNr}).jpg`;
     document.getElementById('poemText').innerHTML = textArray[srcNr];
     console.log(textArray[srcNr]);
 
@@ -81,7 +81,7 @@ let showPoem = function(event){
     let img = document.createElement('img');
     let poemNr = event.target.getAttribute('data-value');
     srcNr = parseInt(poemNr);
-    img.id = "img";
+    img.id = "imgDatabase";
 
     // making text and setting src
     let text = document.createElement('p');
@@ -93,7 +93,6 @@ let showPoem = function(event){
     headTitle.innerHTML = event.target.innerHTML;
 
     img.src = `./mcdatabase/poem(${poemNr}).jpg`;
-    img.style.height = "100%";
 
     //appending img to div and making div visible
     document.getElementById('poemImgDiv').appendChild(text);
