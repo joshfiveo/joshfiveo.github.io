@@ -1,4 +1,5 @@
 //INDEX TING
+let currentlyShowing;
 
 let textArray = ["zeroDoesntExist",
     "There was a man who was curly / with effort he also burly / he fought back against coomers / no patience with boomers / of spirits he was a consoomer /// m'bosso he was a grand lad / he could fuck up a big ass Brad / with a big ass meat stick / dick is soup-can thicc / he could spitroast even great chud /// asses to asses, dusk to dusk (?) / a dick like an elephant tusk / to spitroast a bitch / to scratch a great itch / he fuck like the great Elon Musk",
@@ -28,6 +29,9 @@ function close(){
     while (document.body.lastElementChild.tagName === "BUTTON") {
         document.body.lastElementChild.remove();
     }
+
+    currentlyShowing = "";
+
 }
 
 function rerollImg(){
@@ -38,6 +42,10 @@ function rerollImg(){
 
 function rerollP(){
     document.getElementById('poemImgDiv').firstElementChild.innerHTML = passagesArray[randomIntPassages()];
+}
+
+function rerollTextPoem(){
+    document.getElementById('poemImgDiv').firstElementChild.innerHTML = textArray[randomTextInt()];
 }
 
 //Random integer
@@ -91,6 +99,7 @@ let randomPoem = function(){
         document.getElementById('poemImgDiv').appendChild(poemNrText);
         document.getElementById('poemImgDiv').appendChild(poemNrTextTwo);
 
+        currentlyShowing = "imgPoem";
     }
 }
 
@@ -103,10 +112,12 @@ randomPoemButton.addEventListener('click', randomPoem);
 let hidePoem = function(event){
     if (event.target.innerHTML === "Close") {
         close();
-    } else if (event.target.innerHTML === "reroll" && document.getElementById('poemImgDiv').firstElementChild.tagName === "IMG"){
+    } else if (event.target.innerHTML === "reroll" && currentlyShowing === "imgPoem"){
         rerollImg();
-    } else if (event.target.innerHTML === "reroll" && document.getElementById('poemImgDiv').firstElementChild.tagName === "P"){
+    } else if (event.target.innerHTML === "reroll" && currentlyShowing === "passage"){
         rerollP();
+    } else if (event.target.innerHTML === "reroll" && currentlyShowing === "textPoem"){
+        rerollTextPoem();
     }
 }
 
@@ -144,6 +155,8 @@ let randomLine = function(){
 
         document.body.appendChild(escape);
         document.body.appendChild(reroll);
+
+        currentlyShowing = "passage";
     }
 }
 
@@ -153,10 +166,13 @@ randomLineButton.addEventListener('click', randomLine);
 
 document.addEventListener("keydown", function (event) {
     const key = event.key;
-    if (key === "Enter" && document.getElementById('poemImgDiv').firstElementChild.tagName === "P" && document.body.lastElementChild.innerHTML === "reroll") {
+    if (key === "Enter" && currentlyShowing === "passage") {
         rerollP();
     }
-    if (key === "Enter" && document.getElementById('poemImgDiv').firstElementChild.tagName === "IMG") {
+    if (key === "Enter" && currentlyShowing === "textPoem") {
+        rerollTextPoem();
+    }
+    if (key === "Enter" && currentlyShowing === "imgPoem") {
         rerollImg();
     }
     if (key === "Escape") {
@@ -234,7 +250,15 @@ function textPoem(){
         let escape = document.createElement('button');
         escape.innerHTML = "Close";
 
+        //REROLL BUTTON
+        let reroll = document.createElement('button');
+        reroll.innerHTML = "reroll";
+        reroll.id = "reroll";
+
         document.body.appendChild(escape);
+        document.body.appendChild(reroll);
+
+        currentlyShowing = "textPoem";
 }}
 
 textPoemButton.addEventListener('click', textPoem);

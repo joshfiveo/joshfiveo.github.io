@@ -1,7 +1,13 @@
 // DATABASE STUFF
 let srcNr;
 
-let textArray = ["zeroDoesntExist", "There was a man who was curly / with effort he also burly / he fought back against coomers / no patience with boomers / of spirits he was a consoomer /// m'bosso he was a grand lad / he could fuck up a big ass Brad / with a big ass meat stick / dick is soup-can thicc / he could spitroast even great chud /// asses to asses, dusk to dusk (?) / a dick like an elephant tusk / to spitroast a bitch / to scratch a great itch / he fuck like the great Elon Musk", ""]
+let textArray = ["zeroDoesntExist",
+    "There was a man who was curly / with effort he also burly / he fought back against coomers / no patience with boomers / of spirits he was a consoomer /// m'bosso he was a grand lad / he could fuck up a big ass Brad / with a big ass meat stick / dick is soup-can thicc / he could spitroast even great chud /// asses to asses, dusk to dusk (?) / a dick like an elephant tusk / to spitroast a bitch / to scratch a great itch / he fuck like the great Elon Musk",
+    "Ode to Strr: a dagger or rapier perhaps? / Hark! No! that would make us dex-fags! / i have one rule Brr / i spend all souls on Strr / big pecs = big check and fat stacks",
+    "i ain't never seen no swine like them there pigs / ain't swindling no kindling, throwing pearls for pigs / louisana pedo don't need door / he smash the walls, and breaks you like a twig / proud mullet wearin redneck, but aint no hick / sees doors of perception, minds drifts ashore / consooms copious kegs, coors light galore / a southern Zarathustra, moonshine he swigs / black cop be like, 'missing persons, lol, sike!' / he dont believe, so aint no reprieve, for steve / he gon' be dead, made into cornbread / pedos and swamp things I with my knife strike / it's raining chainsaws in the Quoral Quee / the quota of beer / oh what a relief / we'll reach it / just grind up the dead",
+    "his beastly was a snarlin' / he found himself a cute darlin' / to plow with his stick / until he was sick / with his dick he was himself harmin' /// there once was a dog from the sea / a danm man, everybody can see / he completed uncharted / 'tis so retarded / but based and redpill'd stay'd he /// there once was an african dog / who fearlessly braved the boss-fog / he challeng'd the boss / without purple moss / and never gave the singlest of fuck",
+    "covertly concealed his constipation"
+]
 
 let poemsArray = [];
 
@@ -21,6 +27,8 @@ function next(){
     //new src
     srcNr++;
     document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
+    document.getElementById('poemText').innerHTML = textArray[srcNr];
+    console.log(textArray[srcNr]);
 
     //Head
     let headTitle = document.querySelector('title');
@@ -31,6 +39,8 @@ function prev(){
     //new src
     srcNr--;
     document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
+    document.getElementById('poemText').innerHTML = textArray[srcNr];
+    console.log(textArray[srcNr]);
 
     //Head
     let headTitle = document.querySelector('title');
@@ -73,6 +83,11 @@ let showPoem = function(event){
     srcNr = parseInt(poemNr);
     img.id = "img";
 
+    // making text and setting src
+    let text = document.createElement('p');
+    text.innerHTML = textArray[srcNr];
+    text.id = "poemText";
+
     //Head
     let headTitle = document.querySelector('title');
     headTitle.innerHTML = event.target.innerHTML;
@@ -81,6 +96,7 @@ let showPoem = function(event){
     img.style.height = "100%";
 
     //appending img to div and making div visible
+    document.getElementById('poemImgDiv').appendChild(text);
     document.getElementById('poemImgDiv').appendChild(img);
 
     document.getElementById('poemImgDiv').style.display = "block";

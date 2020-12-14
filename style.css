@@ -192,7 +192,9 @@ button:hover {
 }
 
 img {
-    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    right: 50px;
     display: inline-block;
 }
 
@@ -204,4 +206,13 @@ input[type=text] {
 
 p {
     margin-bottom: 1em;
+}
+
+#poemText {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    display: inline-block;
+    width: 50%;
+    font-size: 28px;
 }
