@@ -5,7 +5,7 @@ let currentlyShowing;
 
 
 
-
+// ARRAY OG POEM OBJEKTER
 
 let textArray = ["zeroDoesntExist",
     "There was a man who was curly <br> with effort he also burly <br> he fought back against coomers <br> no patience with boomers <br> of spirits he was a consoomer <br> <br> m'bosso he was a grand lad <br> he could fuck up a big ass Brad <br> with a big ass meat stick <br> dick is soup-can thicc <br> he could spitroast even great chud <br> <br> asses to asses, dusk to dusk (?) <br> a dick like an elephant tusk <br> to spitroast a bitch <br> to scratch a great itch <br> he fuck like the great Elon Musk",
@@ -16,8 +16,8 @@ let textArray = ["zeroDoesntExist",
     "did the axe done good? yes it done did <br> doth the hack scum Schemeth? some say Schemem. <br> you cucks you coom with whitegray semen <br> you'll end in deepest hell, the darkest pit <br> where devils will on your cock lava spit <br> where cucks hath made sure you get no seamen <br> drip drop, slip slop, woop-de-scoop-de-meme'in <br> knick knack paddy whack, lickety-split, hacks eat shit <br> new-york city gritty comity, pity the fool that <br> get pants shat by madlad, some say ladm <br> textin' and drivin' down mulholland drive <br> thats why I take the 405, sick hat <br> fuckboy cucks, I take a bat and bat 'em <br> Ice cold, bad cats, when I rap, it's jig'n jive",
     "fuck the coom-freaks, coomin' straight outta underground <br> the monk-e with more dope than Eazy-E <br> blink and you'll miss it, big-biz gorilla biscuit, see? <br> bonobo in a suit, pro bono, the count <br> cook the books on the coconut-amount, white-wash bananas by the pound <br> humility must be in lost and not found, you see, G? <br> the fate of man eventually, will be determined by the flows of chimpanze causality <br> hitman harambe racking up a headcount <br> big dick monkey samba flatten bipedal bitches <br> clap cheeks, stack checks, rhymes dirtier than herpes but harder to catch <br> bonobo bimbo bitches blow benis <br> we got the damn monkey-gene, you're a hack, man. Gene [redacted] here snitches <br> imprison the humans, and never open the latch <br> primate power-cleaners, chimpanzee-curl-machines <br> howler-monkeys hack homo sapiens-peeners",
     "imma be honest, im kinda retarded <br> went to take a shit but only farted, yet i rock on <br> a stiffy appears, and I summon the porn <br> a rock hard hard-on, my coom-stick larded <br> intergalactic vampires departed <br> from outer space, the moon call'd Orion <br> fake school shootings, get my thought on <br> gay frogs, you lame fucks, just getting started <br> built like gorilla, mind like a chimp <br> affinities in tactical hygiene <br> the destroyer of thug-scum with mad swipes <br> I deep dick statists and wealthfare simps <br> obamas from nigeria, hillarys clit smells like sardines <br> flush her down pipes <br> shit on the kikes <br> finish the show with combat wipes",
-    "",
-    "10",
+    "from the french-frie-fryer, rose an itchyoid figure <br> drenched in trans-fat sweat, it left an itchy trail <br> cheddar-tentacled, clutching paper cup grail <br> sodastream ichor filled with bitch vigor <br> as the orchard of the obese overlord grows bigger <br> grilled cheese comes across the sky, nuggets fall like hail <br> in bondage humanity quivers, from his chickenfried flail <br> man's back is striped like beefs on a grill, sicker <br> more putrid by the hour, the gut of man grows thiccer <br> with every happy meal comes a forced smile <br> force fed Franks, the mouth of a man of ghastly grimace <br> Ghoulishly the god of gouda, finger on the trigger <br> hits a K-O with the mayo, better lay low while <br> row row with the fat fuck B.O. <br> the greasy fingers of providence mold mans soul like play-doh",
+    "Shall I compare thee to a summers wine? <br> dost not that tentacled thing thine loins moisten <br> figen shot is a vile and toxic poison <br> your rhyme's the opposite of very fine <br> oh, these incomparable invertebrates <br> A man did scam a dyke; what sham! Fuck him! <br> you write such lines, the puke will not subside <br> upon my brain Rupi Kaur grates <br> 'copacetic cephalopod cunts' hark'd Jim <br> I love milk and honey, I have no pride",
     "",
     "",
     "",
@@ -62,6 +62,8 @@ for (i=1;i<43;i++){
             poemText: textArray[i]
         });
 }
+
+console.log(poemsArray);
 
 //button functions
 function close(){
@@ -149,7 +151,7 @@ let randomPoemButton = document.getElementById('randomPoem');
 
 randomPoemButton.addEventListener('click', randomPoem);
 
-//close
+//close and reroll
 
 let hidePoem = function(event){
     if (event.target.innerHTML === "Close") {
@@ -222,16 +224,6 @@ document.addEventListener("keydown", function (event) {
     }
 });
 
-// MUSIC
-/*
-let musicButton = document.getElementById('musicButton');
-
-let playMusic = function() {
-    document.getElementById('musicTag').play();
-}
-
-musicButton.addEventListener('click', playMusic);
-*/
 //SEARCH FUNCTION
 let form = document.getElementById('form');
 

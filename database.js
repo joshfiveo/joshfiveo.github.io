@@ -28,7 +28,6 @@ function next(){
     srcNr++;
     document.getElementById('imgDatabase').src = `./mcdatabase/poem(${srcNr}).jpg`;
     document.getElementById('poemText').innerHTML = textArray[srcNr];
-    console.log(textArray[srcNr]);
 
     //Head
     let headTitle = document.querySelector('title');
@@ -40,7 +39,6 @@ function prev(){
     srcNr--;
     document.getElementById('imgDatabase').src = `./mcdatabase/poem(${srcNr}).jpg`;
     document.getElementById('poemText').innerHTML = textArray[srcNr];
-    console.log(textArray[srcNr]);
 
     //Head
     let headTitle = document.querySelector('title');
@@ -92,7 +90,7 @@ let showPoem = function(event){
     let headTitle = document.querySelector('title');
     headTitle.innerHTML = event.target.innerHTML;
 
-    img.src = `./mcdatabase/poem(${poemNr}).jpg`;
+    img.src = `./mcdatabase/poem(${srcNr}).jpg`;
 
     //appending img to div and making div visible
     document.getElementById('poemImgDiv').appendChild(text);
