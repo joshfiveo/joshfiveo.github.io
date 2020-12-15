@@ -241,3 +241,8 @@ p {
     width: 0;
     background: transparent;
 }
+
+form {
+    display: inline-block;
+    margin: 15px;
+}
