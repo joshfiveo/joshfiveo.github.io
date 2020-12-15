@@ -306,7 +306,7 @@ let searchArray2 = function (event) {
         }
 
         if (passageReturned !== true) {
-            alert(`No poem with keyword "${formInput}" found, hoebag.`);
+            alert(`No poem with keyword "${formInput2}" found, hoebag.`);
         }
     }
 
