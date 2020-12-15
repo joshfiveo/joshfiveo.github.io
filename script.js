@@ -1,6 +1,16 @@
 //INDEX TING
 let currentlyShowing;
 
+//preloading
+function preloadImages(url){
+    let img = new Image();
+    img.src = url;
+}
+
+for (i=1;i<43;i++){
+    preloadImages(`./mcdatabase/poem(${i}).jpg`)
+}
+
 
 
 
