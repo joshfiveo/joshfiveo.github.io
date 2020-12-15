@@ -58,7 +58,9 @@ function prev(){
 
 function close(){
     document.getElementById('poemImgDiv').style.display = "none";
-    document.getElementById('poemImgDiv').firstElementChild.remove();
+    while (document.getElementById('poemImgDiv').firstElementChild !== null) {
+        document.getElementById('poemImgDiv').firstElementChild.remove();
+    }
     while (document.body.lastElementChild.tagName === "BUTTON") {
         document.body.lastElementChild.remove();
     }
