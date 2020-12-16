@@ -1,6 +1,5 @@
 //INDEX TING
 let currentlyShowing;
-let srcNr;
 
 //Import arrays
 import { textArray, passagesArray } from "./textArray.js";
@@ -20,7 +19,7 @@ let randomPoem = function(){
         let img = document.createElement('img');
         img.id = "img";
 
-        srcNr = randomIntPoems();
+        let srcNr = randomIntPoems();
         img.src = `./mcdatabase/poem(${srcNr}).jpg`;
 
         //appending img to div and making div visible
@@ -102,7 +101,9 @@ document.addEventListener("keydown", function (event) {
     }
     if (key === "Escape") {
         close();
+        currentlyShowing = "";
     }
+    console.log(currentlyShowing);
 });
 
 //FORM 1

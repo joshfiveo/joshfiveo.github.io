@@ -1,7 +1,3 @@
-//button functions
-let srcNr;
-let currentlyShowing;
-
 import {passagesArray, textArray} from "./textArray.js";
 
 function searchArrayForMatch(formToUse, array){
@@ -34,13 +30,10 @@ function close(){
     while (document.getElementById('poemImgDiv').firstElementChild !== null) {
         document.getElementById('poemImgDiv').firstElementChild.remove();
     }
-
-    currentlyShowing = "";
-
 }
 
 function rerollImg(){
-    srcNr = randomIntPoems();
+    let srcNr = randomIntPoems();
     document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
     document.getElementById('poemNrTextTwo').innerHTML = `${srcNr}`;
 }
