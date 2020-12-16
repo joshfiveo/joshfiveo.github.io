@@ -64,6 +64,9 @@ let hidePoem = function(){
 
 currentlyShowingContainer.addEventListener('click', hidePoem);
 currentlyShowingContainer.addEventListener('dblclick', close);
+currentlyShowingContainer.addEventListener('dblclick', function(){
+    currentlyShowing = "";
+})
 
 //get random line(s)
 let randomLineButton = document.getElementById('randomLine');
