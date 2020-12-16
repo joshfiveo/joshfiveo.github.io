@@ -2,13 +2,13 @@
 let currentlyShowing;
 
 //Import arrays
-import { textArray, passagesArray } from "./textArray.js";
+import { textArray, passagesArray, numberOfPoems } from "./textArray.js";
 
 //import functions
 import { randomTextInt, close, rerollTextPoem, rerollImg, rerollP, randomIntPoems, randomIntPassages, searchArrayForMatch, preloadImages } from "./functionsMain.js";
 
 //preloading
-for (let i=1;i<43;i++){
+for (let i=1;i<numberOfPoems+1;i++){
     preloadImages(`./mcdatabase/poem(${i}).jpg`)
 }
 
@@ -103,7 +103,6 @@ document.addEventListener("keydown", function (event) {
         close();
         currentlyShowing = "";
     }
-    console.log(currentlyShowing);
 });
 
 //FORM 1

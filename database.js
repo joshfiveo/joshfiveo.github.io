@@ -1,6 +1,6 @@
 // DATABASE STUFF
 //IMPORT
-import { textArray } from "./textArray.js";
+import { textArray, numberOfPoems } from "./textArray.js";
 
 import { preloadImages } from "./functionsMain.js";
 
@@ -8,7 +8,7 @@ import { preloadImages } from "./functionsMain.js";
 let srcNr;
 
 //preloading
-for (let i=1;i<43;i++){
+for (let i=1;i<numberOfPoems;i++){
     preloadImages(`./mcdatabase/poem(${i}).jpg`)
 }
 
@@ -48,7 +48,7 @@ function close(){
 
 // Making buttons
 let makeButtons = function(){
-    for (let i = 1; i < 43; i++){ //Need to change in case of more poems
+    for (let i = 1; i < numberOfPoems+1; i++){ //Need to change in case of more poems
         let button = document.createElement('a');
         button.innerHTML = `Poem ${i}`;
         button.setAttribute('data-value', `${i}`);
@@ -99,7 +99,7 @@ window.addEventListener('load', function (){
 let poemImgDiv = document.getElementById('poemImgDiv');
 
 let hidePoem = function(event){
-    if ((window.innerWidth / 2) < event.clientX && srcNr !== 42){
+    if ((window.innerWidth / 2) < event.clientX && srcNr !== numberOfPoems){
         next();
     } else if ((window.innerWidth / 2) > event.clientX && srcNr !== 1){
         prev();
@@ -110,7 +110,7 @@ poemImgDiv.addEventListener('click', hidePoem);
 poemImgDiv.addEventListener('dblclick', close);
 document.addEventListener("keydown", function (event) {
     const key = event.key;
-    if (key === "ArrowRight" && srcNr !== 42) { //Need to change if more poems
+    if (key === "ArrowRight" && srcNr !== numberOfPoems) { //Need to change if more poems
         next();
     }
     if (key === "ArrowLeft" && srcNr !== 1) {
