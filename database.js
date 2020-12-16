@@ -103,9 +103,6 @@ function close(){
     while (document.getElementById('poemImgDiv').firstElementChild !== null) {
         document.getElementById('poemImgDiv').firstElementChild.remove();
     }
-    while (document.body.lastElementChild.tagName === "BUTTON") {
-        document.body.lastElementChild.remove();
-    }
 
     //Head
     let headTitle = document.querySelector('title');
@@ -152,24 +149,6 @@ let showPoem = function(event){
     document.getElementById('poemImgDiv').appendChild(img);
 
     document.getElementById('poemImgDiv').style.display = "block";
-
-    //close button
-    let escape = document.createElement('button');
-    escape.innerHTML = "Close";
-
-    //Nnext button
-    let next = document.createElement('button');
-    next.innerHTML = ">";
-    next.id = "next";
-
-    //Prev Button
-    let prev = document.createElement('button');
-    prev.innerHTML = "<";
-    prev.id = "prev";
-
-    document.body.appendChild(escape);
-    document.body.appendChild(next);
-    document.body.appendChild(prev);
 }
 
 window.addEventListener('load', function (){
@@ -180,19 +159,18 @@ window.addEventListener('load', function (){
 
 
 // HIDER and next and prev
-
+let poemImgDiv = document.getElementById('poemImgDiv');
 
 let hidePoem = function(event){
-    if (event.target.innerHTML === "Close") {
-        close();
-    } else if (event.target.id === "next" && srcNr !== 42){ //Need to change if more poems
+    if ((window.innerWidth / 2) < event.clientX && srcNr !== 42){
         next();
-    } else if (event.target.id === "prev" && srcNr !== 1){
+    } else if ((window.innerWidth / 2) > event.clientX && srcNr !== 1){
         prev();
     }
 }
 
-document.addEventListener('click', hidePoem);
+poemImgDiv.addEventListener('click', hidePoem);
+poemImgDiv.addEventListener('dblclick', close);
 document.addEventListener("keydown", function (event) {
     const key = event.key;
     if (key === "ArrowRight" && srcNr !== 42) { //Need to change if more poems

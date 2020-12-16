@@ -31,7 +31,7 @@ let textArray = ["zeroDoesntExist",
     "there once was a man who was boss <br> he smok'd fools without a big fuss <br> he's one of the best <br> he has a big chest <br> he'll wreck you if you get cross <br><br> there once was a jolla with a dolla <br> a gentleman and a good scholar <br> he fuck'd with the best <br> and put 'em to rest <br> and mopped the floors without holla <br><br> christopher is a good fella <br> a good natural born killa <br> a real good nigga <br> she don't like it bigger <br> you won't find a bugger who's chiller",
     "there once was a chaddest of chads <br> o', he was the laddest of lads <br> with the maddest of knowledge <br> from byrgenworth college <br> pappa g is the best of dads <br><br> his sideburns were mighty and bushy <br> he had a big waifu plushie <br> he fucked up the dex-fags <br> with hunters-axe-bitchwax <br> he impal'd them right in the tuschy <br><br> when 'gherman the creep' came a knockin' <br> pop gaz put his axe in his noggin <br> at first he was fucke'd <br> but then he him cuck'd <br> he gherman gave a good cockin' <br><br> there once was a man who transform'd <br> by poppa and momma was scorn'd <br> he was a fur venerate <br> an utter degenerate <br> his head with a hat he adorn'd",
     "i go gorilla, a sick killa, shit in your vanilla <br> iller than a chimp on a hill 'a dead pimps <br> hammer curling harambe halving the half life of simps <br> breaking backs like bane, hands like a tiller <br> call me ted munky, the twisted simian serial killer <br> my banana splits your ass, shit's bananas, your life's a glimpse <br> king kong wayne gacy, i get off tearin your head off, and feed it to chimps <br> bombing the loo like im ted kadchimpsky <br> boxing kongo killer in the ring of <br> the btk: banana, torture and killin, the beheading, chin-checkin ape villain <br> the silverback with endless gold, 3-point your head from a free throw <br> half lenin, half kimbo: comrade ape illich ulyanov <br> redistribute this chimp dick to all you hoes seed-tillin' <br> and just by the way <br> this ape drinks the whey <br> this massive gorilla's doin' blow",
-    "why always zoe on the fookin phone! <br> why always boris, when name is sergei <br> she don't need no man, kima greggs is bae <br> hey! sergei: my name isphone please tell my mom <br> this is the ore, these are the bones <br> hillbillies and undeads, this shit we slay <br> we will our resources conserve, oy vey <br> balding men and old crones <br> by the cock of tom jones <br> we'll fist fuck all the swamp thing clone <br> mystery lines, lost forever to time <br> obscure scripture, 'at the party, richter' <br> discerning the undiscernible text <br> 'you're next to be fried, the condiment fits the mccrime' the burger king(tm) manager, i dick'd her <br> she sent me a sext, i shouldnt have read <br> i went insane when i read the mcscripture",
+    "why always zoe on the fookin phone! <br> why always boris, when name is sergei <br> she don't need no man, kima greggs is bae <br> hey! sergei: my name isphone please tell my mom <br> this is the ore, these are the bones <br> hillbillies and undeads, this shit we slay <br> we will our resources conserve, oy vey <br> balding men and old crones <br> by the cock of tom jones <br> we'll fist fuck all the swamp thing clone <br> mystery lines, lost forever to time <br> obscure scripture, 'at the party, richter' <br> discerning the undiscernible text <br> 'you're next to be fried, the condiment fits the mccrime' <br> the burger king(tm) manager, i dick'd her <br> she sent me a sext, i shouldnt have read <br> i went insane when i read the mcscripture",
     "",
     "",
     "",
@@ -81,9 +81,6 @@ function close(){
     while (document.getElementById('poemImgDiv').firstElementChild !== null) {
         document.getElementById('poemImgDiv').firstElementChild.remove();
     }
-    while (document.body.lastElementChild.tagName === "BUTTON") {
-        document.body.lastElementChild.remove();
-    }
 
     currentlyShowing = "";
 
@@ -129,15 +126,6 @@ let randomPoem = function(){
 
         document.getElementById('poemImgDiv').style.display = "block";
 
-        //close button
-        let escape = document.createElement('button');
-        escape.innerHTML = "Close";
-
-        //REROLL BUTTON
-        let reroll = document.createElement('button');
-        reroll.innerHTML = "reroll";
-        reroll.id = "reroll";
-
         //<p>'s
         let poemNrText = document.createElement('p');
         poemNrText.innerHTML = 'P <br> O <br> E <br> M';
@@ -148,8 +136,6 @@ let randomPoem = function(){
         poemNrTextTwo.innerHTML = `${srcNr}`;
         poemNrTextTwo.id = "poemNrTextTwo";
 
-        document.body.appendChild(escape);
-        document.body.appendChild(reroll);
         document.getElementById('poemImgDiv').appendChild(poemNrText);
         document.getElementById('poemImgDiv').appendChild(poemNrTextTwo);
 
@@ -163,19 +149,20 @@ randomPoemButton.addEventListener('click', randomPoem);
 
 //close and reroll
 
+let currentlyShowingContainer = document.getElementById('poemImgDiv');
+
 let hidePoem = function(event){
-    if (event.target.innerHTML === "Close") {
-        close();
-    } else if (event.target.innerHTML === "reroll" && currentlyShowing === "imgPoem"){
+    if (currentlyShowing === "imgPoem"){
         rerollImg();
-    } else if (event.target.innerHTML === "reroll" && currentlyShowing === "passage"){
+    } else if (currentlyShowing === "passage"){
         rerollP();
-    } else if (event.target.innerHTML === "reroll" && currentlyShowing === "textPoem"){
+    } else if (currentlyShowing === "textPoem"){
         rerollTextPoem();
     }
 }
 
-document.addEventListener('click', hidePoem);
+currentlyShowingContainer.addEventListener('click', hidePoem);
+currentlyShowingContainer.addEventListener('dblclick', close);
 
 //get random line(s)
 let passagesArray = ["he was a fur venerate / an utter degenerate", "they gargled the jizzom / but read no john grisham", "limp dick doug dimmadomes get sliced like cabbage", "i have one rule brr / i spend all souls on strr / big pecs = big checks and fat stacks", "to plow with his stick / until he was sick", "drip drop, slip slop, woop-de-scoop-de-meme'in / knick-knack paddy whack, lickety-split, hacks eat shit", "big dick monkey samba flatten bipedal bitches / [..] / bonobo bimbo bitches blow benis", "hillary's clit smells like sardines / flush her down the pipes / shit on the kikes / finish the show with combat wipes", "a man did scam a dyke; what sham! fuck him!", '"copacetic cephalopod cunts" harkd jim', "call me ted munky, the twisted simian serial killer [..] bombing the loo, like i'm ted kachimpsky", "hey! sergei: my name isphone please tell my mom", "unbearably loud i coomed on my couch / when i saw jenna haze, i was left in a daze / and died with my peener ablaze", "so i strangle my stiffy until it goes bendy / i'm dissappointing a wench named wendy", "pop fat souls to increase your swole, hoebag", "a wreckening reckoning: bumhole banishment", "his name: larry snakes. his testicles bloom'd / bloom'd they did, women swoon'd; love reborn and: / five-finger fist fucks, a tongue-punch'd fartbox", "seasoned with suffering, an inhuman mcoffering", "there once was a cuck in a town", "i blew out the shitter / i don't know what hit her", "with whip in hand, he prepares for hate crime", "the untimely termination of fellatio gave the erstwhile guzzler leverage", "you're left cooming in your room in a jizz salto", "blow your rectal trumpets gabriel", "to poke and prod with massive, pulsing rod", "eldritch effluviate engulfed england / rich royal rightous racists repress'd rembrandt / painting purple pompous painful ass", "'to check yourself before you wreck yourself is sound advice' hark'd snakes and took a shit", "and met a lad nam'd lee who was to be / a cocksman of the highest order", "paul bunyuns bunion for the rings of mconion", "angela merkel nukes the ukranians", "it rot, then smell'd, then he said: lets have fun / we'll have loads of fun with rape and pillage", "a kike he drew a knife to fight, and lurk", "the world is dark and black with death, it sucks / i hate these fucking cooming zoomer cucks", "'laughing, larry cut of his head, then said / you're dead, you fuck, i got the balls of gods' / while ye coomers were masturbating, i be decapitatin'", "my pleasure is my dick in a mouse trap", "'o, ye old god of cod: ye hath harness'd / the power of the ass' stated larry", "finger much but hole? dat ass", "he took their wives, the chink, the horse the coon / he met zizek, he sniff'd a sea of coke", "shaking his fist at the paleblood sky, he said: / 'with slugs, and his fav'rit weapon: pencils / from the depths of hell, i relieve at thee my guts", "follow the path of living[larry] snakes", "all work and no play makes jack a mad breh"];
@@ -197,18 +184,6 @@ let randomLine = function(){
         //appending
         document.getElementById('poemImgDiv').appendChild(lines);
         document.getElementById('poemImgDiv').style.display = "block";
-
-        //close button
-        let escape = document.createElement('button');
-        escape.innerHTML = "Close";
-
-        //REROLL BUTTON
-        let reroll = document.createElement('button');
-        reroll.innerHTML = "reroll";
-        reroll.id = "reroll";
-
-        document.body.appendChild(escape);
-        document.body.appendChild(reroll);
 
         currentlyShowing = "passage";
     }
@@ -249,15 +224,10 @@ let searchArray = function (event) {
                 lines.id = "lines";
                 lines.style.fontSize = "25px";
 
-                //close button
-                let escape = document.createElement('button');
-                escape.innerHTML = "Close";
-
                 //appending
                 if (document.getElementById('poemImgDiv').firstElementChild === null) {
                     document.getElementById('poemImgDiv').appendChild(lines);
                     document.getElementById('poemImgDiv').style.display = "block";
-                    document.body.appendChild(escape);
                 }
 
                 passageReturned = true;
@@ -290,15 +260,10 @@ let searchArray2 = function (event) {
                 lines.id = "lines";
                 lines.style.fontSize = "25px";
 
-                //close button
-                let escape = document.createElement('button');
-                escape.innerHTML = "Close";
-
                 //appending
                 if (document.getElementById('poemImgDiv').firstElementChild === null) {
                     document.getElementById('poemImgDiv').appendChild(lines);
                     document.getElementById('poemImgDiv').style.display = "block";
-                    document.body.appendChild(escape);
                 }
 
                 passageReturned = true;
@@ -330,18 +295,6 @@ function textPoem(){
         //appending
         document.getElementById('poemImgDiv').appendChild(lines);
         document.getElementById('poemImgDiv').style.display = "block";
-
-        //close button
-        let escape = document.createElement('button');
-        escape.innerHTML = "Close";
-
-        //REROLL BUTTON
-        let reroll = document.createElement('button');
-        reroll.innerHTML = "reroll";
-        reroll.id = "reroll";
-
-        document.body.appendChild(escape);
-        document.body.appendChild(reroll);
 
         currentlyShowing = "textPoem";
 }}
