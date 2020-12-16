@@ -2,15 +2,12 @@
 //IMPORT
 import { textArray } from "./textArray.js";
 
+import { preloadImages } from "./functionsMain.js";
+
 //GLOBAL VARIABLES
 let srcNr;
 
 //preloading
-function preloadImages(url){
-    let img = new Image();
-    img.src = url;
-}
-
 for (let i=1;i<43;i++){
     preloadImages(`./mcdatabase/poem(${i}).jpg`)
 }

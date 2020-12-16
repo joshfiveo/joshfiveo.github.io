@@ -5,48 +5,12 @@ let srcNr;
 //Import arrays
 import { textArray, passagesArray } from "./textArray.js";
 
-//preloading
-function preloadImages(url){
-    let img = new Image();
-    img.src = url;
-}
+//import functions
+import { randomTextInt, close, rerollTextPoem, rerollImg, rerollP, randomIntPoems, randomIntPassages, searchArrayForMatch, preloadImages } from "./functionsMain.js";
 
+//preloading
 for (let i=1;i<43;i++){
     preloadImages(`./mcdatabase/poem(${i}).jpg`)
-}
-
-//button functions
-function close(){
-    document.getElementById('poemImgDiv').style.display = "none";
-    while (document.getElementById('poemImgDiv').firstElementChild !== null) {
-        document.getElementById('poemImgDiv').firstElementChild.remove();
-    }
-
-    currentlyShowing = "";
-
-}
-
-function rerollImg(){
-    srcNr = randomIntPoems();
-    document.getElementById('img').src = `./mcdatabase/poem(${srcNr}).jpg`;
-    document.getElementById('poemNrTextTwo').innerHTML = `${srcNr}`;
-}
-
-function rerollP(){
-    document.getElementById('poemImgDiv').firstElementChild.innerHTML = passagesArray[randomIntPassages()];
-}
-
-function rerollTextPoem(){
-    document.getElementById('poemImgDiv').firstElementChild.innerHTML = textArray[randomTextInt()];
-}
-
-//Random integer
-function randomIntPoems(){ //amount of poem documents
-    return Math.floor(Math.random() * 42) + 1; //Need to change if more poems
-}
-
-function randomTextInt(){
-    return Math.floor(Math.random() * 42) + 1; //Need to change if more poems
 }
 
 //get random poem
@@ -103,11 +67,6 @@ currentlyShowingContainer.addEventListener('click', hidePoem);
 currentlyShowingContainer.addEventListener('dblclick', close);
 
 //get random line(s)
-
-function randomIntPassages(){
-    return Math.floor(Math.random() * passagesArray.length);
-}
-
 let randomLineButton = document.getElementById('randomLine');
 
 let randomLine = function(){
@@ -146,31 +105,6 @@ document.addEventListener("keydown", function (event) {
     }
 });
 
-//SEARCH FUNCTION GENERIC
-function searchArrayForMatch(formToUse, array){
-    let passageReturned;
-    let formInput = document.getElementById(`${formToUse}`).value.toLowerCase();
-    for (let i = 0; i < array.length; i++) {
-        if (array[i].includes(formInput)) {
-            let lines = document.createElement('p');
-            lines.innerHTML = array[i];
-            lines.id = "lines";
-            lines.style.fontSize = "25px";
-
-            //appending
-            if (document.getElementById('poemImgDiv').firstElementChild === null) {
-                document.getElementById('poemImgDiv').appendChild(lines);
-                document.getElementById('poemImgDiv').style.display = "block";
-            }
-
-            passageReturned = true;
-        }
-    }
-
-    if (passageReturned !== true) {
-        alert(`No passage with keyword "${formInput}" found, hoebag.`);
-    }
-}
 //FORM 1
 let form = document.getElementById('form');
 
