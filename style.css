@@ -32,7 +32,7 @@ h1, h2 {
     margin-bottom: 3em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(100, 1fr);
+    grid-template-rows: repeat(11, 1fr);
     grid-row-gap: 1em;
 }
 
@@ -48,7 +48,7 @@ h1, h2 {
     #poemsContainer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(100, 1fr);
+        grid-template-rows: repeat(21, 1fr);
     }
 
     img {
