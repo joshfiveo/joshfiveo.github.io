@@ -2,6 +2,9 @@
 let currentlyShowing;
 let srcNr;
 
+//Import arrays
+import { textArray, passagesArray } from "./textArray.js";
+
 //preloading
 function preloadImages(url){
     let img = new Image();
@@ -11,9 +14,6 @@ function preloadImages(url){
 for (let i=1;i<43;i++){
     preloadImages(`./mcdatabase/poem(${i}).jpg`)
 }
-
-//Import arrays
-import { textArray, passagesArray } from "./textArray.js";
 
 //button functions
 function close(){
@@ -149,7 +149,7 @@ document.addEventListener("keydown", function (event) {
 //SEARCH FUNCTION GENERIC
 function searchArrayForMatch(formToUse, array){
     let passageReturned;
-    let formInput = document.getElementById(`${formToUse}`).value;
+    let formInput = document.getElementById(`${formToUse}`).value.toLowerCase();
     for (let i = 0; i < array.length; i++) {
         if (array[i].includes(formInput)) {
             let lines = document.createElement('p');
